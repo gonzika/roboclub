@@ -1,0 +1,542 @@
+:root {
+    --max-width: 1920px;
+    --slideChAge-height: 35px;
+}
+
+
+body {
+    background: #eaeaea;
+    font-family: Ubuntu;
+    padding: 20px;
+}
+
+header {
+    display: block
+}
+
+.wrapper, .head-trinity, .head-trinity-img {
+    width: 1141px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    margin: 0 auto;
+}
+
+.block1 {
+    height: 566px;
+    margin-top: 5%;
+    display: flex;
+}   
+
+.leftSide {
+    display: inline-flex;
+    flex-direction: column;
+    width: 410px;
+}
+
+.misto-logo {
+    width: 294px;
+    height: 102px;
+    background-image: url("../img/Misto_logo-1.png");
+    margin: 4% 0;
+}
+
+.zapishi1 {
+    width: 409px;
+    height: 98px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 49px;
+    text-transform: uppercase;
+    color: #64B42D;
+    margin: 4% 0;
+}
+
+.zapishi2 {
+    width: 343px;
+    height: 54px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #2C2C2C;
+    margin: 2% 0;
+}
+
+.zapishi-logo {
+    width: 279px;
+    height: 39px;
+    left: 15px;
+    display: flex;
+    margin-top: 29px;
+    margin-bottom: 42px;
+
+}
+
+.Python-logo {
+    width: 39px;
+    height: 39px;
+    background-image: url("../img/Python-logo-1.png");
+}
+
+.arduino {
+    width: 52px;
+    height: 39px;
+    background-image: url("../img/arduino-1.png");
+}
+
+.scratch {
+    width: 49px;
+    height: 39px;
+    background-image: url("../img/scratch-1.png");
+}
+
+.wedo-en-benidorm {
+    width: 76px;
+    height: 39px;
+    background-image: url("../img/wedo-en-benidorm-1.png");
+}
+
+.take-order, .take-order3 {
+    width: fit-content;
+    padding: 0 20px;
+    height: 54px;
+    background: #64B42D;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: 0;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #FFFFFF;
+}
+
+.boygirl {
+    width: 747px;
+    height: 547px;
+    background-image: url("../img/pic-1.png");
+    display: flex;
+    margin-left: -25px;
+}
+
+.block2, .block3 {
+    margin-top: 5%;
+    display: grid;
+}
+
+.block2Head, .block3Head {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.row3 {
+    width: 33.33%;
+    
+}
+
+.itcours {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #2C2C2C;
+}
+
+.itcours-grey {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #919191;
+}
+
+.swiper-pagination {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    height: 54px;
+    width: fit-content;
+    position: static;
+}
+
+.row-center {
+    display: block;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    opacity: 1;
+    background: #919191;
+    box-shadow: 0px 1px 1px #919191;
+    margin: 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #64B42D;
+    box-shadow: 0px 1px 1px #2DC218;
+}
+
+.arrows {
+     display: inline-flex;
+     
+     width: fit-content;
+     height: 50px;
+ }
+
+ .row-end {
+    text-align: end;
+ }
+
+.swiper-button-prev {
+    margin-top: 0;
+    margin-right: 25px;
+    color: transparent;
+    width: 50px;
+    height: 50px;
+    position: unset;
+    align-items: center;
+    background-image: url("../img/arrow-left/arrow-left.svg");
+}
+
+.swiper-button-next {
+    margin-top: 0;
+    color: transparent;
+    width: 50px;
+    height: 50px;
+    position: unset;
+    background-image: url("../img/arrow-right/arrow-right.svg");
+}
+
+.swiper-container {
+    width: 1110px;
+    height: 540px;
+}
+
+.swiper-slide {
+    text-align: right;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.slideHeader {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 33.33%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.salesChild {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin: 8px;
+    background: #D6326C;
+    border-radius: 15px;
+    padding: 5px 10px;
+    display: inline-flex;
+    width: fit-content;
+}
+
+.slideTitle {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    /* h3 */
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+    text-transform: uppercase;
+    /* LIGHT GREEN */
+    color: #64B42D;
+}
+
+.slideChAge {
+    position: absolute;
+    left: 40px;
+    top: 117px;
+    width: 170px;
+    height: var(--slideChAge-height);
+    background: #FFFFFF;
+    box-shadow: 1px 1px 5px rgba(44, 44, 44, 0.15);
+    border-radius: 30px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    /* LIGHT GREEN */
+    color: #64B42D;
+    line-height: var(--slideChAge-height);
+    
+}
+
+.slide1img {
+    position: absolute;
+    width: 84px;
+    height: 79px;
+    left: 226px;
+    top: 80px;
+}
+
+.slide2img {
+    position: absolute;
+    width: 138px;
+    height: 163px;
+    left: 212px;
+    top: 0px;
+}
+
+.slideText {
+    position: absolute;
+    width: 268px;
+    height: 122px;
+    left: 42px;
+    top: 200px;
+    /* small */
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    /* TEXT */
+    color: #2C2C2C;
+    text-align: left;
+}
+
+.topMarg {
+    position: initial;
+    margin-top: 1%;
+}
+
+.qyear {
+    position: absolute;
+    left: 42px;
+    top: 382px;
+    /* main */
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    /* GREY */
+    color: #919191;
+}
+
+.price {
+    position: absolute;
+    width: 163px;
+    height: 31px;
+    left: 176px;
+    top: 370px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    /* LIGHT GREEN */
+    color: #64B42D;
+}
+
+.valuta {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: none;
+    /* LIGHT GREEN */
+    color: #2C2C2C;
+}
+
+.choose-order {
+    position: absolute;
+    width: 172px;
+    height: 42px;
+    left: 89px;
+    top: 458px;
+    /* yellow */
+    background: #FBC901;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: 0;
+}
+
+.listStyle li {
+    position: relative;
+    padding: 5px 0 0 15px;
+    cursor: pointer;
+    
+  }
+
+.listStyle li:before {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: black;
+    content: "";
+    left: 3px;
+    transition: .3s ease-in-out;
+    transform: translate(0, 150%)
+  }
+
+  p {
+      margin-top: 1%;
+  }
+
+  li {
+    line-height: 98%;
+  }
+
+
+.socialMedia {
+display: flex;
+align-items: center;
+}
+
+.socialMedia > a {
+    margin: 0 12px;
+}
+
+.socialMedia > a:hover{
+    transition: all .3s linear;
+    filter: invert(60%) sepia(15%) saturate(2060%) hue-rotate(52deg) brightness(99%) contrast(85%);
+}
+
+.video {
+    display: inline-flex;
+}
+
+.video>video {
+    width: 663px;
+    height: 408px;
+}
+
+.video>ul {
+    margin-left: 52px;
+}
+
+.video>ul>li {
+font-family: Ubuntu;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+color: #2C2C2C;
+}
+
+.video>ul>li:nth-child(odd) {
+    list-style-image: url("../img/list.png");
+}
+
+.video>ul>li:nth-child(even) {
+    list-style-image: url("../img/Line2.png");
+    list-style-position: -10px;
+}
+
+.foot3 {
+    display: inline;
+}
+
+.lend3 {
+    width: 585px;
+    margin-top: 60px;
+    display: inline-block;
+    height: 300px;
+}
+
+.zapishi3 {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #64B42D;
+}
+
+.telInput {
+    width: 350px;
+    height: 58px;
+    background: #FFFFFF;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    text-align: center;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #C3C3C3;
+    margin-top: 32px;
+    margin-right: 27px;
+}
+
+.take-order3 {
+    height: 64px;
+}
+
+.dog3 {
+position: relative;
+width: 199px;
+height: 232px;
+right: -25%;
+bottom: 0;
+display: inline-flex;
+background: url("../img/5f2d2656b3012.png");
+
+}
