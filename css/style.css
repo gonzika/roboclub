@@ -1,13 +1,8 @@
-:root {
-    --max-width: 1920px;
-    --slideChAge-height: 35px;
-}
-
-
 body {
     background: #eaeaea;
     font-family: Ubuntu;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 header {
@@ -15,13 +10,12 @@ header {
 }
 
 .wrapper, .head-trinity, .head-trinity-img {
-    width: 1141px;
+    max-width: 1140px;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    display: flex;
     margin: 0 auto;
 }
 
@@ -34,7 +28,7 @@ header {
 .leftSide {
     display: inline-flex;
     flex-direction: column;
-    width: 410px;
+    margin: 0 auto;
 }
 
 .misto-logo {
@@ -138,6 +132,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0;
+    justify-content: space-between;
 }
 
 .row3 {
@@ -205,7 +200,8 @@ header {
     text-align: end;
  }
 
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-prev2 {
     margin-top: 0;
     margin-right: 25px;
     color: transparent;
@@ -216,7 +212,8 @@ header {
     background-image: url("../img/arrow-left/arrow-left.svg");
 }
 
-.swiper-button-next {
+.swiper-button-next,
+.swiper-button-next2 {
     margin-top: 0;
     color: transparent;
     width: 50px;
@@ -507,6 +504,10 @@ color: #2C2C2C;
     color: #64B42D;
 }
 
+.order3 {
+    margin-top: 32px;
+}
+
 .telInput {
     width: 350px;
     height: 58px;
@@ -517,13 +518,12 @@ color: #2C2C2C;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.2em;
     text-transform: lowercase;
     color: #C3C3C3;
-    margin-top: 32px;
     margin-right: 27px;
+    border-width: 0;
 }
 
 .take-order3 {
@@ -538,5 +538,119 @@ right: -25%;
 bottom: 0;
 display: inline-flex;
 background: url("../img/5f2d2656b3012.png");
+}
 
+.section4 {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.wrapper4 {
+    display: block;
+    margin: 0 auto;
+}
+
+.wrapper4 h2 {
+    display: block;
+}
+
+.lego1 {
+    background: url('../img/lego.png');
+    width: 500px;
+    height: 793px;
+    position: absolute;
+    z-index: -1;
+    top: -22%;
+    left: -3%;
+}
+
+.lego2 {
+    background: url(../img/lego-1.png);
+    width: 814px;
+    height: 793px;
+    position: absolute;
+    z-index: -1;
+    top: -28%;
+    right: 0%;
+}
+
+
+
+.cell4 {
+    width: calc(33.33% - 42px);
+    display: flex;
+}
+
+.list4 {
+    width: 1141px;
+    display: flex;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #2C2C2C;
+    flex-wrap: wrap;
+    margin-top: 54px;
+    justify-content: space-between;
+}
+
+.list4-img1 {
+    display: inline;
+    padding-top: 4px;
+}
+
+h3 {
+    font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 150%;
+letter-spacing: 0.05em;
+color: #2C2C2C;
+}
+
+.list-text1 {
+    width: 300px;
+    padding-left: 16px;
+    padding-right: 26px;
+    margin-bottom: 55px;
+}
+
+.section5, .section6 {
+font-size: 14px;
+line-height: 16px;
+margin: 75px 0;
+letter-spacing: 0.05em;
+color: #2C2C2C;
+}
+
+.slider2 {
+display: flex;
+justify-content: space-between;
+}
+
+.swiper-container2 {
+    margin-top: 55px;
+}
+
+.swiper-slide2 {
+margin: 0 5px;
+text-align: center;
+}
+
+.swiper2--text-teacher {
+margin-top: 20px;
+width: 180px;
+}
+
+.swiper-button-center {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-prev2 {
+    margin: 0 0;
 }
