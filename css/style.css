@@ -646,6 +646,7 @@ justify-content: space-between;
 .swiper-slide2 {
 margin: 0 5px;
 text-align: center;
+width: auto;
 }
 
 .swiper2--text-teacher {
@@ -727,4 +728,67 @@ width: 180px;
 
 .swiper-slide3 img {
     margin-top: 18px;
+}
+
+.section7 {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h2--big {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.take-order7 {
+width: 220px;
+height: 54px;
+margin-top: 55px;
+margin-bottom: 25px;
+}
+
+.grey7 {
+    padding-bottom: 55px;
+}
+
+.section7--right {
+    background-image: url("../img/Слой 0 1.png");
+    width: 359px;
+    height: 275px;
+    margin-top: 55px;
+}
+
+.wrapper2 {
+    max-width: 935px;
+    margin: 0 auto;
+    display: block;
+}
+
+.section8 {
+    padding: 55px 0;
+    background-color: #64B42D;
+}
+
+.section8--flex {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+font-size: 96px;
+line-height: 110px;
+text-align: center;
+letter-spacing: 0.025em;
+color: #FFFFFF;
+}
+
+
+.section8--flex p {
+    font-size: 24px;
+line-height: 28px;
+text-align: center;
+letter-spacing: 0.025em;
 }
