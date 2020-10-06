@@ -1,40 +1,39 @@
 body {
-    background: #eaeaea;
+    background: #fff;
     font-family: Ubuntu;
     box-sizing: border-box;
+    color: #2C2C2C;
 }
 
 header {
-    display: block;
+    background-color: #eaeaea;
 }
 
-.wrapper, .head-trinity, .head-trinity-img {
+.wrapper, .head-trinity-img {
     max-width: 1140px;
     margin: 0 auto;
     display: block;
 }
 
 .section1 {
-    background: white;
-    padding-top: 40px;
+    margin-top: 70px;
+    padding-top: 45px;
+    padding-left: 15px;
 }
 
 .block1 {
-    height: 566px;
     display: flex;
 }   
 
-.leftSide {
-    display: inline-flex;
-    flex-direction: column;
-    margin: 0 auto;
-}
+/* .leftSide {
+
+} */
 
 .misto-logo {
     width: 294px;
     height: 102px;
     background-image: url("../img/Misto_logo-1.png");
-    margin: 4% 0;
+    margin-bottom: 30px;
 }
 
 .zapishi1 {
@@ -46,7 +45,7 @@ header {
     line-height: 49px;
     text-transform: uppercase;
     color: #64B42D;
-    margin: 4% 0;
+    margin-bottom: 10px;
 }
 
 .zapishi2 {
@@ -59,16 +58,16 @@ header {
     line-height: 150%;
     letter-spacing: 0.05em;
     color: #2C2C2C;
-    margin: 2% 0;
+    margin-bottom: 30px;
 }
 
 .zapishi-logo {
-    width: 279px;
+    width: 280px;
     height: 39px;
     left: 15px;
     display: flex;
-    margin-top: 29px;
     margin-bottom: 42px;
+    justify-content: space-between;
 
 }
 
@@ -97,14 +96,11 @@ header {
 }
 
 .take-order, .take-order3 {
-    width: fit-content;
-    padding: 0 20px;
-    height: 54px;
+    padding: 18px 37px;
     background: #64B42D;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     border: 0;
-    font-family: Ubuntu;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -122,22 +118,25 @@ header {
     margin-left: -25px;
 }
 
-.section2, .section3 {
-    padding-top: 5%;
+.section2 {
+    padding-top: 40px;
 }
 
 .section3 {
-    background: white;
+    padding-top: 5px;
+}
+
+.section2 {
+padding-bottom: 50px;
 }
 
 .gradient {
     background: linear-gradient(to bottom, #eaeaea 0%, #f0f0f0 50%, #fff 100%);
-    /* background-image: linear-gradient(to bottom, #333399 40%, #fe00cc 100%); */
 }
 
 .block2Head, .block3Head {
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 45px 0;
 }
 
 .row, .block2Head, .block3Head {
@@ -157,7 +156,7 @@ header {
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
-    color: #2C2C2C;
+
 }
 
 .itcours-grey {
@@ -212,7 +211,7 @@ header {
  .swiper--nav {
      display: flex;
      justify-content: space-between;
-     margin-bottom: 45px;
+     margin-bottom: 27px;
      margin-right: 30px;
  }
 
@@ -241,7 +240,7 @@ header {
 }
 
 .swiper-container {
-    width: 1110px;
+    /* width: 1110px; */
     height: 540px;
 }
 
@@ -254,6 +253,7 @@ header {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+    
 }
 
 .slideHeader {
@@ -349,8 +349,7 @@ header {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;
-    /* TEXT */
-    color: #2C2C2C;
+
     text-align: left;
 }
 
@@ -401,8 +400,8 @@ header {
     line-height: 16px;
     text-align: center;
     text-transform: none;
-    /* LIGHT GREEN */
     color: #2C2C2C;
+
 }
 
 .choose-order {
@@ -471,6 +470,7 @@ align-items: center;
 
 .video>ul {
     margin-left: 52px;
+    margin-top: 10px;
 }
 
 .video>ul>li {
@@ -478,7 +478,7 @@ font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
-color: #2C2C2C;
+margin-top: 6px;
 }
 
 .video>ul>li:nth-child(odd) {
@@ -491,7 +491,7 @@ color: #2C2C2C;
 }
 
 .foot3 {
-    display: inline;
+    position: relative;
 }
 
 .lend3 {
@@ -538,11 +538,10 @@ color: #2C2C2C;
 }
 
 .dog3 {
-position: relative;
+position: absolute;
 width: 199px;
 height: 232px;
-right: -25%;
-bottom: 0;
+right: 0;
 display: inline-flex;
 background: url("../img/5f2d2656b3012.png");
 }
@@ -598,9 +597,9 @@ background: url("../img/5f2d2656b3012.png");
     font-size: 18px;
     line-height: 150%;
     letter-spacing: 0.05em;
-    color: #2C2C2C;
     flex-wrap: wrap;
     margin-top: 54px;
+    margin-bottom: 30px;
     justify-content: space-between;
 }
 
@@ -616,7 +615,6 @@ font-weight: bold;
 font-size: 18px;
 line-height: 150%;
 letter-spacing: 0.05em;
-color: #2C2C2C;
 }
 
 .list-text1 {
@@ -626,12 +624,15 @@ color: #2C2C2C;
     margin-bottom: 55px;
 }
 
+.section5 {
+    background-color: #eaeaea;
+}
+
 .section5, .section6 {
 font-size: 14px;
 line-height: 16px;
-margin: 75px 0;
+padding: 75px 0;
 letter-spacing: 0.05em;
-color: #2C2C2C;
 }
 
 .slider2 {
@@ -731,7 +732,7 @@ width: 180px;
 }
 
 .section7 {
-    padding-top: 100px;
+    padding-top: 25px;
     display: flex;
     justify-content: space-between;
 }
@@ -746,8 +747,6 @@ width: 180px;
 }
 
 .take-order7 {
-width: 220px;
-height: 54px;
 margin-top: 55px;
 margin-bottom: 25px;
 }
@@ -763,12 +762,6 @@ margin-bottom: 25px;
     margin-top: 55px;
 }
 
-.wrapper2 {
-    max-width: 935px;
-    margin: 0 auto;
-    display: block;
-}
-
 .section8 {
     padding: 55px 0;
     background-color: #64B42D;
@@ -776,19 +769,95 @@ margin-bottom: 25px;
 
 .section8--flex {
     display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-font-size: 96px;
-line-height: 110px;
-text-align: center;
-letter-spacing: 0.025em;
-color: #FFFFFF;
+    justify-content: space-around;
+
 }
 
+.section8 .section8--flex>div {
+font-weight: bold;
+font-size: 96px;
+line-height: 110px;
+letter-spacing: 0.025em;
+color: #FFFFFF;
+text-align: center;
+}
 
 .section8--flex p {
     font-size: 24px;
 line-height: 28px;
 text-align: center;
 letter-spacing: 0.025em;
+}
+
+.section9 {
+    margin-top: 90px;
+}
+
+.section9--left {
+    background-image: url("../img/robots 1.png");
+    width: 365px;
+    height: 340px;
+}
+
+.section9--right {
+    text-align: center;
+}
+
+.section9--h2 {
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 49px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.section9--telInput[type="text"] {
+    margin-top: 35px;
+}
+
+.section9--telInput {
+    width: 350px;
+    height: 58px;
+    background: #FFFFFF;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    border-width: 0px;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #C3C3C3;
+    text-align: start;
+    padding-left: 42px;
+    margin-bottom: 26px;
+}
+
+.take-order--9 {
+    margin-bottom: 23px;
+}
+
+.footer--left {
+    font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 150%;
+/* or 27px */
+
+letter-spacing: 0.05em;
+}
+
+footer span {
+    margin: 45px 0;
+}
+
+.footer--right {
+    display: flex;  
+    align-items: flex-end;
+}
+
+footer {
+    margin: 100px 0;
 }

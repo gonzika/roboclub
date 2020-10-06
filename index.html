@@ -21,10 +21,8 @@
 <body>
 
 
-    <header class="header wrapper">
-        <div class="head-trinity">
-            <img src="./img/лендинг айнекст_new2 1.png" class="head-trinity-img" />
-        </div>
+    <header>
+        <img src="./img/лендинг айнекст_new2 1.png" class="head-trinity-img" />
     </header>
     <main>
         <section class="section1">
@@ -43,8 +41,8 @@
                             <div class="scratch"></div>
                             <div class="wedo-en-benidorm"></div>
                         </div>
-                        <button id="take-order" class="take-order" type="button" data-toggle="modal" href="#"
-                            data-target="#callme">подать заявку</button>
+                        <!-- todo in center -->
+                        <button class="take-order" type="button" href="#">подать заявку</button>
                     </div>
                     <div class="boygirl"></div>
                 </div>
@@ -68,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- todo shadow bottom -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slider1--slide">
@@ -271,11 +269,12 @@
                         <strong class="zapishi3">получите бесплатное занятие!</strong>
                         <div class="order3">
                             <input class="telInput" type="tel" name="phone" placeholder="(+380) _________">
-                            <button class="take-order3" type="button" href="#">записаться</button>
+                            <button class="take-order" type="button" href="#">записаться</button>
                         </div>
                     </span>
                     <div class="dog3"></div>
                 </div>
+
             </div>
         </section>
 
@@ -350,8 +349,8 @@
             </div>
         </section>
 
-        <div class="wrapper">
-            <section class="section5">
+        <section class="section5">
+            <div class="wrapper">
                 <h2 class="itcours">наши преподаватели</h2>
                 <div class="slider2">
                     <div class="swiper-button-center">
@@ -385,8 +384,9 @@
                         <div class="swiper-button-next2"></div>
                     </div>
                 </div>
-            </section>
-
+            </div>
+        </section>
+        <div class="wrapper">
             <section class="section6">
                 <h2 class="itcours">Мероприятия</h2>
 
@@ -442,7 +442,7 @@
                 <div class="section7--left">
                     <h2 class="h2--big">при оплате за 3 месяца - скидка!*</h2>
                     <div class="itcours-grey">*только для абонентов Тринити</div>
-                    <button class="take-order3 take-order7" type="button" href="#">подключиться</button>
+                    <button class="take-order take-order7" type="button" href="#">подключиться</button>
                     <div class="itcours-grey grey7">Подключите Тринити и воспользуйтесь скидкой!</div>
                 </div>
                 <div class="section7--right"></div>
@@ -450,7 +450,7 @@
         </div>
 
         <section class="section8">
-            <div class="wrapper2">
+            <div class="wrapper">
                 <div class="section8--flex">
                     <div>
                         <div>15</div>
@@ -471,6 +471,79 @@
                 </div>
             </div>
         </section>
+
+        <section class="section9">
+            <div class="wrapper">
+                <div class="section8--flex">
+                    <div class="section9--left"></div>
+                    <div class="section9--right">
+                        <h2 class="section9--h2">остались вопросы?</h2>
+                        <div class="itcours-grey">оставьте номер телефона и мы перезвоним Вам!</div>
+                        <div><input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя">
+                        </div>
+                        <div><input class="section9--telInput" type="tel" name="phone" placeholder="(+380) _________">
+                        </div>
+                        <button class="take-order take-order--9" type="button" href="#">обратный звонок</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrapper">
+                <div class="row">
+                    <div class="footer--left">
+                        <h2 class="itcours">контакты</h2>
+                        <span class="socialMedia">
+                            <a href="#">
+                                <svg width="36" height="36" viewbox="0 0 36 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.0955 31.4955V19.2015H24.243L24.8595 14.388H20.0955V11.322C20.0955 9.93304 20.4825 8.98204 22.476 8.98204H25.002V4.69054C23.7729 4.55883 22.5376 4.49523 21.3015 4.50004C17.6355 4.50004 15.1185 6.73804 15.1185 10.8465V14.379H10.998V19.1925H15.1275V31.4955H20.0955Z"
+                                        fill="#919191" />
+                                </svg>
+
+                            </a>
+                            <a href="#">
+                                <svg width="37" height="36" viewbox="0 0 37 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.3685 13.3137C15.788 13.3137 13.6821 15.4196 13.6821 18C13.6821 20.5805 15.788 22.6864 18.3685 22.6864C20.9489 22.6864 23.0548 20.5805 23.0548 18C23.0548 15.4196 20.9489 13.3137 18.3685 13.3137ZM32.4239 18C32.4239 16.0594 32.4415 14.1364 32.3325 12.1992C32.2235 9.94924 31.7103 7.95236 30.0649 6.30705C28.4161 4.65822 26.4228 4.14846 24.1728 4.03947C22.2321 3.93049 20.3091 3.94807 18.372 3.94807C16.4313 3.94807 14.5083 3.93049 12.5712 4.03947C10.3212 4.14846 8.32431 4.66174 6.679 6.30705C5.03017 7.95588 4.52041 9.94924 4.41142 12.1992C4.30244 14.1399 4.32002 16.0629 4.32002 18C4.32002 19.9371 4.30244 21.8637 4.41142 23.8008C4.52041 26.0508 5.03369 28.0477 6.679 29.693C8.32783 31.3418 10.3212 31.8516 12.5712 31.9606C14.5118 32.0696 16.4349 32.052 18.372 32.052C20.3126 32.052 22.2356 32.0696 24.1728 31.9606C26.4228 31.8516 28.4196 31.3383 30.0649 29.693C31.7138 28.0442 32.2235 26.0508 32.3325 23.8008C32.445 21.8637 32.4239 19.9406 32.4239 18ZM18.3685 25.2106C14.3782 25.2106 11.1579 21.9903 11.1579 18C11.1579 14.0098 14.3782 10.7895 18.3685 10.7895C22.3587 10.7895 25.579 14.0098 25.579 18C25.579 21.9903 22.3587 25.2106 18.3685 25.2106ZM25.8743 12.1781C24.9427 12.1781 24.1903 11.4258 24.1903 10.4942C24.1903 9.56252 24.9427 8.81018 25.8743 8.81018C26.806 8.81018 27.5583 9.56252 27.5583 10.4942C27.5586 10.7154 27.5152 10.9345 27.4307 11.1389C27.3462 11.3434 27.2221 11.5291 27.0657 11.6855C26.9093 11.842 26.7235 11.966 26.5191 12.0505C26.3146 12.1351 26.0955 12.1784 25.8743 12.1781Z"
+                                        fill="#919191" />
+                                </svg>
+
+                            </a>
+                            <a href="#">
+                                <svg width="37" height="36" viewbox="0 0 37 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M34.8462 9.56435C34.4573 8.11848 33.3173 6.97871 31.8716 6.58939C29.2306 5.86676 18.6662 5.86676 18.6662 5.86676C18.6662 5.86676 8.10224 5.86676 5.4612 6.56199C4.04334 6.9509 2.87556 8.11868 2.48665 9.56435C1.79163 12.2052 1.79163 17.6819 1.79163 17.6819C1.79163 17.6819 1.79163 23.1863 2.48665 25.7995C2.87598 27.2452 4.01553 28.385 5.4614 28.7743C8.13005 29.4971 18.6666 29.4971 18.6666 29.4971C18.6666 29.4971 29.2306 29.4971 31.8716 28.8019C33.3175 28.4128 34.4573 27.273 34.8466 25.8273C35.5414 23.1863 35.5414 17.7097 35.5414 17.7097C35.5414 17.7097 35.5692 12.2052 34.8462 9.56435ZM15.3027 22.7416V12.6223L24.0876 17.6819L15.3027 22.7416Z"
+                                        fill="#919191" />
+                                </svg>
+                            </a>
+                        </span>
+                        <div>
+                            Режим работы:<br>
+                            ежедневно с 8:00 до 20:00 без перерыва<br>
+                            <br>
+                            КОМПАНИЯ:<br>
+                            TRINITY<br>
+                            <br>
+                            АДРЕС:<br>
+                            Мариуполь, ул. Громовой, 63<br>
+                            <br>
+                            ТЕЛЕФОН:<br>
+                            (0629) 51-20-33<br>
+                            (098) 1000-700<br>
+                            (099) 1000-700<br>
+                            (063) 1000-700
+                        </div>
+                    </div>
+                    <div class="footer--right"><img src="img/map.jpg" alt="map"></div>
+                </div>
+            </div>
+        </footer>
+
     </main>
     <!-- Initialize Swiper -->
     <script>
