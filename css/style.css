@@ -240,30 +240,39 @@ padding-bottom: 50px;
 }
 
 .swiper-container {
-    /* width: 1110px; */
+    width: 1110px;
     height: 540px;
 }
 
 .slider1--slide {
+    display: flex;
+}
+
+.slide1-container {
+    /* width: 100%;
+    height: 100%; */
+    margin: 3px;
     text-align: right;
     font-size: 18px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 15px;
-    
+}
+
+.slide1-container:hover {
+    transition: all .3s ease-in-out;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
 }
 
 .slideHeader {
-    position: absolute;
+    /* position: absolute;
     top: 0px;
-    width: 100%;
+    width: 100%; */
     height: 33.33%;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 .salesChild {
@@ -282,6 +291,10 @@ padding-bottom: 50px;
     width: fit-content;
 }
 
+.salesChild--no-magrin {
+    margin-left: 0px;
+}
+
 .slideTitle {
     position: absolute;
     left: 40px;
@@ -297,6 +310,10 @@ padding-bottom: 50px;
     text-transform: uppercase;
     /* LIGHT GREEN */
     color: #64B42D;
+}
+
+.slideTitle--small-padding {
+    left: 30px;
 }
 
 .slideChAge {
@@ -337,15 +354,16 @@ padding-bottom: 50px;
 }
 
 .slideText {
-    position: absolute;
+    margin: 20px 40px;
+    /* position: absolute;
     width: 268px;
     height: 122px;
     left: 42px;
-    top: 200px;
+    top: 200px; */
     /* small */
-    font-family: Ubuntu;
+    /* font-family: Ubuntu;
     font-style: normal;
-    font-weight: normal;
+    font-weight: normal; */
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;
@@ -638,21 +656,26 @@ letter-spacing: 0.05em;
 .slider2 {
 display: flex;
 justify-content: space-between;
+margin-top: 55px;
 }
 
 .swiper-container2 {
-    margin-top: 55px;
+    margin-top: 35px;
+    width: 920px;
 }
 
-.swiper-slide2 {
-margin: 0 5px;
+.slider2--slide {
 text-align: center;
-width: auto;
+width: 160px;
 }
 
 .swiper2--text-teacher {
+    text-align: center;
 margin-top: 20px;
-width: 180px;
+}
+
+.text-teacher--short {
+    letter-spacing: 0;
 }
 
 .swiper-button-center {
