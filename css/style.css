@@ -884,3 +884,42 @@ footer span {
 footer {
     margin: 100px 0;
 }
+
+.modal-body .row img {
+    width: 102px;
+    height: 101px;
+}
+
+.row--modal {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.order-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.order-h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #919191;
+}
+
+.order-p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #C3C3C3;
+}
+
+.modal__take-order {
+    padding: 50px auto;
+    text-align: center;
+}
+

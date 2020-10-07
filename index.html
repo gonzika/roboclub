@@ -16,10 +16,56 @@
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal__take-order">
+                        <div><input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя">
+                        </div>
+                        <div><input class="section9--telInput" type="tel" name="phone" placeholder="(+380) _________">
+                        </div>
+                        <p class="order-p"><img src="img/dino.png" alt="done"> поле не может быть пустым</p>
+                        <button type="button" class="take-order take-order--9" data-toggle="modal"
+                            data-target="#exampleModalCenter2" onclick="$('#exampleModalCenter').modal('hide')">подать
+                            заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row row--modal">
+                        <div><img src="img/mdi_done.png" alt="done"></div>
+                        <div class="order-text">
+                            <h3 class="order-h3">заявка принята</h3>
+                            <p class="order-p">С вами свяжутся в течение суток</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header>
         <img src="./img/лендинг айнекст_new2 1.png" class="head-trinity-img" />
@@ -41,8 +87,9 @@
                             <div class="scratch"></div>
                             <div class="wedo-en-benidorm"></div>
                         </div>
-                        <!-- todo in center -->
-                        <button class="take-order" type="button" href="#">подать заявку</button>
+
+                        <button type="button" class="take-order" data-toggle="modal"
+                            data-target="#exampleModalCenter">подать заявку</button>
                     </div>
                     <div class="boygirl"></div>
                 </div>
@@ -85,8 +132,8 @@
                                 </div>
                                 <span class="qyear">1 год</span>
                                 <div class="price">800 <span class="valuta">грн/мес</span></div>
-                                <button class="choose-order" type="button" data-toggle="modal" href="#"
-                                    data-target="#callme">выбрать</button>
+                                <button type="button" class="choose-order" data-toggle="modal"
+                                    data-target="#exampleModalCenter">выбрать</button>
                             </div>
                         </div>
                         <div class="swiper-slide slider1--slide">
@@ -111,8 +158,8 @@
                                     <span class="qyear">1 год</span>
                                     <div class="price">750 <span class="valuta">грн/мес</span></div>
                                 </div>
-                                <button class="choose-order" type="button" data-toggle="modal" href="#"
-                                    data-target="#callme">выбрать</button>
+                                <button type="button" class="choose-order" data-toggle="modal"
+                                    data-target="#exampleModalCenter">выбрать</button>
                             </div>
                         </div>
                         <div class="swiper-slide slider1--slide">
@@ -133,8 +180,8 @@
                                 </div>
                                 <span class="qyear">1 год</span>
                                 <div class="price">450 <span class="valuta">грн/мес</span></div>
-                                <button class="choose-order" type="button" data-toggle="modal" href="#"
-                                    data-target="#callme">выбрать</button>
+                                <button type="button" class="choose-order" data-toggle="modal"
+                                    data-target="#exampleModalCenter">выбрать</button>
                             </div>
                         </div>
                         <div class="swiper-slide slider1--slide">
@@ -159,8 +206,8 @@
                                 </div>
                                 <span class="qyear">1 год</span>
                                 <div class="price">700 <span class="valuta">грн/мес</span></div>
-                                <button class="choose-order" type="button" data-toggle="modal" href="#"
-                                    data-target="#callme">выбрать</button>
+                                <button type="button" class="choose-order" data-toggle="modal"
+                                    data-target="#exampleModalCenter">выбрать</button>
                             </div>
                         </div>
                         <div class="swiper-slide slider1--slide">
@@ -181,8 +228,8 @@
                                 </div>
                                 <span class="qyear">1 год</span>
                                 <div class="price">350 <span class="valuta">грн/мес</span></div>
-                                <button class="choose-order" type="button" data-toggle="modal" href="#"
-                                    data-target="#callme">выбрать</button>
+                                <button type="button" class="choose-order" data-toggle="modal"
+                                    data-target="#exampleModalCenter">выбрать</button>
                             </div>
                         </div>
                         <div class="swiper-slide slider1--slide">
@@ -207,8 +254,8 @@
                                 </div>
                                 <span class="qyear">2 месяца</span>
                                 <div class="price">0 <span class="valuta">грн/мес</span></div>
-                                <button class="choose-order" type="button" data-toggle="modal" href="#"
-                                    data-target="#callme">выбрать</button>
+                                <button type="button" class="choose-order" data-toggle="modal"
+                                    data-target="#exampleModalCenter">выбрать</button>
                             </div>
                         </div>
                     </div>
@@ -281,7 +328,8 @@
                         <strong class="zapishi3">получите бесплатное занятие!</strong>
                         <div class="order3">
                             <input class="telInput" type="tel" name="phone" placeholder="(+380) _________">
-                            <button class="take-order" type="button" href="#">записаться</button>
+                            <button type="button" class="take-order" data-toggle="modal"
+                                data-target="#exampleModalCenter2">записаться</button>
                         </div>
                     </span>
                     <div class="dog3"></div>
@@ -457,7 +505,8 @@
                 <div class="section7--left">
                     <h2 class="h2--big">при оплате за 3 месяца - скидка!*</h2>
                     <div class="itcours-grey">*только для абонентов Тринити</div>
-                    <button class="take-order take-order7" type="button" href="#">подключиться</button>
+                    <button class="take-order take-order7" type="button" data-toggle="modal"
+                        data-target="#exampleModalCenter">подключиться</button>
                     <div class="itcours-grey grey7">Подключите Тринити и воспользуйтесь скидкой!</div>
                 </div>
                 <div class="section7--right"></div>
@@ -498,7 +547,8 @@
                         </div>
                         <div><input class="section9--telInput" type="tel" name="phone" placeholder="(+380) _________">
                         </div>
-                        <button class="take-order take-order--9" type="button" href="#">обратный звонок</button>
+                        <button type="button" class="take-order take-order--9" data-toggle="modal"
+                            data-target="#exampleModalCenter2">обратный звонок</button>
                     </div>
                 </div>
             </div>
