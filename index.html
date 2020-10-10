@@ -6,13 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+
+
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -26,6 +27,11 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- <script src="script/jquery.validate.min.js"></script> -->
+
 </head>
 
 <body>
@@ -55,7 +61,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div class="row row--modal">
+                    <div class="row-robo row--modal">
                         <div><img src="img/mdi_done.png" alt="done"></div>
                         <div class="order-text">
                             <h3 class="order-h3">заявка принята</h3>
@@ -91,7 +97,12 @@
                         <button type="button" class="take-order" data-toggle="modal"
                             data-target="#exampleModalCenter">подать заявку</button>
                     </div>
-                    <div class="boygirl"></div>
+                    <div class="balls">
+                        <div class="slon"></div>
+                        <div class="girl"></div>
+                        <div class="boy"></div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -113,14 +124,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- todo shadow bottom -->
+
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slider1--slide">
                             <div class="slide1-container">
                                 <div class="slideHeader">
-                                    <span class="slideTitle">3d моделирование</span>
-                                    <span class="slideChAge">дети 10 - 15 лет</span>
+                                    <div class="slideTitle">3d моделирование</div>
+                                    <div class="slideChAge">дети 10 - 15 лет</div>
                                     <img src="../img/slide1img.png" class="slide1img" />
                                 </div>
                                 <div class="slideText">
@@ -130,18 +141,22 @@
                                     </p>
                                     <p>3 уровня сложности, сертификаты по окончанию.</p>
                                 </div>
-                                <span class="qyear">1 год</span>
-                                <div class="price">800 <span class="valuta">грн/мес</span></div>
+                                <div class="slide-price">
+                                    <span>1 год</span>
+                                    <div class="price">800 <span class="valuta">грн/мес</span></div>
+                                </div>
                                 <button type="button" class="choose-order" data-toggle="modal"
                                     data-target="#exampleModalCenter">выбрать</button>
                             </div>
                         </div>
+
                         <div class="swiper-slide slider1--slide">
                             <div class="slide1-container">
+                                <img src="../img/robohand.png" class="slide2img" />
                                 <div class="slideHeader">
-                                    <span class="slideTitle">робототехника</span>
-                                    <span class="slideChAge">дети 7 - 14 лет</span>
-                                    <img src="../img/robohand.png" class="slide2img" />
+                                    <div class="slideTitle">робототехника</div>
+                                    <div class="slideChAge">дети 7 - 14 лет</div>
+
                                 </div>
                                 <div class="slideText">
                                     <p>Робототехника для самых маленьких</p>
@@ -154,8 +169,8 @@
                                     </ul>
                                     <p class="topMarg">4 уровня сложности</p>
                                 </div>
-                                <div class="">
-                                    <span class="qyear">1 год</span>
+                                <div class="slide-price">
+                                    <span class="">1 год</span>
                                     <div class="price">750 <span class="valuta">грн/мес</span></div>
                                 </div>
                                 <button type="button" class="choose-order" data-toggle="modal"
@@ -166,8 +181,8 @@
                             <div class="slide1-container">
                                 <div class="slideHeader">
                                     <div class="salesChild">акция -10%</div>
-                                    <span class="slideTitle">программирование it-логика</span>
-                                    <span class="slideChAge">дети 7 - 9 лет</span>
+                                    <div class="slideTitle">программирование it-логика</div>
+                                    <div class="slideChAge">дети 7 - 9 лет</div>
                                     <img src="../img/PC.png" class="slide1img" />
                                 </div>
                                 <div class="slideText">
@@ -178,8 +193,10 @@
                                         <li>IT-логика</li>
                                     </ul>
                                 </div>
-                                <span class="qyear">1 год</span>
-                                <div class="price">450 <span class="valuta">грн/мес</span></div>
+                                <div class="slide-price">
+                                    <span class="qyear">1 год</span>
+                                    <div class="price">450 <span class="valuta">грн/мес</span></div>
+                                </div>
                                 <button type="button" class="choose-order" data-toggle="modal"
                                     data-target="#exampleModalCenter">выбрать</button>
                             </div>
@@ -187,9 +204,9 @@
                         <div class="swiper-slide slider1--slide">
                             <div class="slide1-container">
                                 <div class="slideHeader">
-                                    <span class="slideTitle">программирование
-                                        для старших</span>
-                                    <span class="slideChAge">дети 10 - 15 лет</span>
+                                    <div class="slideTitle">программирование
+                                        для старших</div>
+                                    <div class="slideChAge">дети 10 - 15 лет</div>
                                     <img src="../img/slide1img.png" class="slide1img" />
                                 </div>
                                 <div class="slideText">
@@ -204,8 +221,10 @@
                                         первые азы в востребованной профессии
                                     </p>
                                 </div>
-                                <span class="qyear">1 год</span>
-                                <div class="price">700 <span class="valuta">грн/мес</span></div>
+                                <div class="slide-price">
+                                    <span class="qyear">1 год</span>
+                                    <div class="price">700 <span class="valuta">грн/мес</span></div>
+                                </div>
                                 <button type="button" class="choose-order" data-toggle="modal"
                                     data-target="#exampleModalCenter">выбрать</button>
                             </div>
@@ -213,8 +232,8 @@
                         <div class="swiper-slide slider1--slide">
                             <div class="slide1-container">
                                 <div class="slideHeader">
-                                    <span class="slideTitle">Интеллект JR</span>
-                                    <span class="slideChAge">дети 5 - 6 лет</span>
+                                    <div class="slideTitle">Интеллект JR</div>
+                                    <div class="slideChAge">дети 5 - 6 лет</div>
                                     <img src="../img/brain.png" class="slide1img" />
                                 </div>
                                 <div class="slideText">
@@ -226,8 +245,10 @@
                                         <li>Азы программирования и робототехники</li>
                                     </ul>
                                 </div>
-                                <span class="qyear">1 год</span>
-                                <div class="price">350 <span class="valuta">грн/мес</span></div>
+                                <div class="slide-price">
+                                    <span class="qyear">1 год</span>
+                                    <div class="price">350 <span class="valuta">грн/мес</span></div>
+                                </div>
                                 <button type="button" class="choose-order" data-toggle="modal"
                                     data-target="#exampleModalCenter">выбрать</button>
                             </div>
@@ -236,9 +257,9 @@
                             <div class="slide1-container">
                                 <div class="slideHeader">
                                     <div class="salesChild">набор открыт</div>
-                                    <span class="slideTitle slideTitle--small-padding">университет
-                                        третьего поколения</span>
-                                    <span class="slideChAge">для взрослых</span>
+                                    <div class="slideTitle slideTitle--small-padding">университет
+                                        третьего поколения</div>
+                                    <div class="slideChAge">для взрослых</div>
                                     <img src="../img/grandma.png" class="slide1img" />
                                 </div>
                                 <div class="slideText">
@@ -252,8 +273,10 @@
                                         <li>Работа со смартфонами </li>
                                     </ul>
                                 </div>
-                                <span class="qyear">2 месяца</span>
-                                <div class="price">0 <span class="valuta">грн/мес</span></div>
+                                <div class="slide-price">
+                                    <span class="qyear">2 месяца</span>
+                                    <div class="price">0 <span class="valuta">грн/мес</span></div>
+                                </div>
                                 <button type="button" class="choose-order" data-toggle="modal"
                                     data-target="#exampleModalCenter">выбрать</button>
                             </div>
@@ -263,7 +286,7 @@
             </div>
         </section>
 
-        <section class="section3">
+        <!-- <section class="section3">
             <div class="wrapper">
                 <div class="block3Head">
                     <span class="titleBlock3">
@@ -323,15 +346,13 @@
                     </ul>
                 </div>
                 <div class="foot3">
-                    <span class="lend3">
-                        <div class="salesChild salesChild--no-magrin">бонус</div><br>
-                        <strong class="zapishi3">получите бесплатное занятие!</strong>
-                        <div class="order3">
-                            <input class="telInput" type="tel" name="phone" placeholder="(+380) _________">
-                            <button type="button" class="take-order" data-toggle="modal"
-                                data-target="#exampleModalCenter2">записаться</button>
-                        </div>
-                    </span>
+                    <div class="salesChild salesChild--no-magrin">бонус</div><br>
+                    <strong class="zapishi3">получите бесплатное занятие!</strong>
+                    <form class="order3">
+                        <input class="telInput" type="tel" name="phone" placeholder="(+380) _________">
+                        <button type="button" class="take-order" data-toggle="modal"
+                            data-target="#exampleModalCenter2">записаться</button>
+                    </form>
                     <div class="dog3"></div>
                 </div>
 
@@ -343,7 +364,7 @@
             <div class="section4">
                 <div class="lego1"></div>
 
-                <div class="wrapper4">
+                <div class="wrapper">
                     <h2 class="itcours">мы развиваем:</h2>
                     <div class="list4">
                         <div class="cell4 list4-1">
@@ -412,7 +433,7 @@
         <section class="section5">
             <div class="wrapper">
                 <h2 class="itcours">наши преподаватели</h2>
-                <div class="slider2">
+                 <div class="slider2">
                     <div class="swiper-button-center">
                         <div class="swiper-button-prev2"></div>
                     </div>
@@ -446,7 +467,7 @@
                         <div class="swiper-button-next2"></div>
                     </div>
                 </div>
-            </div>
+        </div>
         </section>
 
         <div class="wrapper">
@@ -538,17 +559,21 @@
 
         <section class="section9">
             <div class="wrapper">
-                <div class="section8--flex">
+                <div class="section9--flex">
                     <div class="section9--left"></div>
                     <div class="section9--right">
                         <h2 class="section9--h2">остались вопросы?</h2>
                         <div class="itcours-grey">оставьте номер телефона и мы перезвоним Вам!</div>
-                        <div><input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя">
-                        </div>
-                        <div><input class="section9--telInput" type="tel" name="phone" placeholder="(+380) _________">
-                        </div>
-                        <button type="button" class="take-order take-order--9" data-toggle="modal"
-                            data-target="#exampleModalCenter2">обратный звонок</button>
+                        <form id="form1">
+                            <div><input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя"
+                                    minlength="2" required>
+                            </div>
+                            <div><input class="section9--telInput" type="tel" name="phone"
+                                    placeholder="(+380) _________" required>
+                            </div>
+                            <button type="submit" id="submit" class="take-order take-order--9" data-toggle="modal"
+                                data-target="#exampleModalCenter2" disabled>обратный звонок</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -556,7 +581,7 @@
 
         <footer>
             <div class="wrapper">
-                <div class="row">
+                <div class="row-robo">
                     <div class="footer--left">
                         <h2 class="itcours">контакты</h2>
                         <span class="socialMedia">
@@ -607,55 +632,119 @@
                     <div class="footer--right"><img src="img/map.jpg" alt="map"></div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
     </main>
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
-            slidesPerView: 3,
-            spaceBetween: 30,
-            slidesPerGroup: 3,
+            slidesPerView: 1,
+            spaceBetween: 1,
+            slidesPerGroup: 1,
             loop: true,
             loopFillGroupWithBlank: true,
+            cssMode: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                dynamicBullets: true,
             },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-        });
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 5,
 
-        var swiper2 = new Swiper('.swiper-container2', {
-            cssMode: true,
-            slidesPerView: 5,
-            spaceBetween: 30,
-            slidesPerGroup: 1,
-            loop: true,
-            loopFillGroupWithBlank: true,
-
-            navigation: {
-                nextEl: '.swiper-button-next2',
-                prevEl: '.swiper-button-prev2',
+                },
+                1000: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 5,
+                },
+                1100: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 30,
+                },
             },
         });
 
+        // var swiper2 = new Swiper('.swiper-container2', {
+        //     cssMode: true,
+        //     slidesPerView: 2,
+        //     spaceBetween: 30,
+        //     slidesPerGroup: 1,
+        //     loop: true,
+        //     loopFillGroupWithBlank: true,
 
-        var swiper3 = new Swiper('.swiper-container3', {
-            cssMode: true,
-            navigation: {
-                nextEl: '.swiper-button-next3',
-                prevEl: '.swiper-button-prev3',
-            },
-            pagination: {
-                el: '.swiper-pagination3'
-            },
-            mousewheel: true,
-            keyboard: true,
-        });
+        //     navigation: {
+        //         nextEl: '.swiper-button-next2',
+        //         prevEl: '.swiper-button-prev2',
+        //     },
+
+        //     breakpoints: {
+        //         // when window width is >= 320px
+        //         320: {
+        //             slidesPerView: 3,
+        //             spaceBetween: 20
+        //         },
+        //         // when window width is >= 480px
+        //         767: {
+        //             slidesPerView: 4,
+        //             spaceBetween: 30
+        //         },
+        //         // when window width is >= 640px
+        //         1199: {
+        //             slidesPerView: 5,
+        //             spaceBetween: 40
+        //         }
+        //     }
+        // });
+
+        // var swiper3 = new Swiper('.swiper-container3', {
+        //     cssMode: true,
+        //     navigation: {
+        //         nextEl: '.swiper-button-next3',
+        //         prevEl: '.swiper-button-prev3',
+        //     },
+        //     pagination: {
+        //         el: '.swiper-pagination3'
+        //     },
+        //     mousewheel: true,
+        //     keyboard: true,
+        // });
+
+        // document.querySelectorAll('section9--telInput').checkValidity()
+
+
+        //TODO
+        // document.getElementById('submit').disabled
+
+        // $(function () {
+        //     $('#form').validate({
+        //         rules: {
+        //             firstname: {
+        //                 required: true,
+        //                 minlength: 2
+        //             }
+        //         },
+        //         messages: {
+        //             firstname: {
+        //                 required: "Поле 'Имя' обязательно к заполнению",
+        //                 minlength: "Введите не менее 2-х символов в поле 'Имя'"
+        //             },
+        //             email: {
+        //                 required: "Поле 'Email' обязательно к заполнению",
+        //                 email: "Необходим формат адреса email"
+        //             }
+        //         }
+        //     });
+        // });
 
     </script>
 </body>
