@@ -15,7 +15,7 @@ header {
     max-width: 1160px;
     margin: 0 auto;
     display: block;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .head-trinity-img {
@@ -23,29 +23,53 @@ header {
 }
 
 .section1 {
-    margin-top: 70px;
-    padding-top: 45px;
+    padding: 30px 0;
+    position: relative;
 }
 
-.block1 {
-    display: flex;
-    position: relative;
-}   
+.sect1-pic {
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -45px;
+    /* background-image: url("../img/main/pic.png"); */
+    z-index: -5;
+}
 
-/* .leftSide {
+@media screen and (max-width: 981px) {
+    .sect1-pic {
+        opacity: 0.85;
+    }
+}
 
-} */
+@media screen and (max-width: 770px) {
+    .sect1-pic {
+        transform: scale(-1, 1); 
+        right: none;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sect1-pic {
+        transform: scale(-1, 1); 
+        right: none;
+        /* scale: 0.4; */
+    }
+    .block1 {
+        text-align: center;
+    }   
+}
+
+
 
 .misto-logo {
-    width: 294px;
-    height: 102px;
-    background-image: url("../img/Misto_logo-1.png");
+    max-width: 294px;
     margin-bottom: 30px;
 }
 
 .zapishi1 {
     max-width: 409px;
-    font-style: normal;
     font-weight: bold;
     font-size: 43px;
     line-height: 49px;
@@ -55,15 +79,8 @@ header {
 }
 
 .zapishi2 {
-    width: 343px;
-    height: 54px;
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
-    line-height: 150%;
     letter-spacing: 0.05em;
-    color: #2C2C2C;
     margin-bottom: 30px;
 }
 
@@ -74,7 +91,39 @@ header {
     display: flex;
     margin-bottom: 42px;
     justify-content: space-between;
+}
 
+@media screen and (max-width: 500px) {
+    .zapishi-logo {
+        margin-bottom: 42px;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .misto-logo {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .zapishi1 {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .zapishi2 {
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+    }
+
+    .arduino {
+        order: 1;
+    }
+    .wedo-en-benidorm {
+        order: 1;
+    }
 }
 
 .Python-logo {
@@ -116,7 +165,9 @@ header {
     color: #FFFFFF;
 }
 
-.balls {
+
+
+/* .balls {
     width: 714px;
     height: 547px;
     position: absolute;
@@ -154,7 +205,7 @@ header {
     bottom: 0;
     background-image: url("../img/main/boy.png");
     z-index: -2;
-}
+} */
 
 .section2 {
     padding-top: 40px;
@@ -212,6 +263,15 @@ padding-bottom: 50px;
         font-size: 12px;
         line-height: 120%;
     }
+
+    .block2Head, .block3Head {
+        flex-wrap: wrap;
+        margin: 15px 0;
+    }
+
+    .section2 {
+        padding-top: 20px;
+    }
 }
 
 .swiper-pagination, .swiper-pagination3 {
@@ -260,9 +320,7 @@ padding-bottom: 50px;
      margin-right: 15px;
  }
 
-.swiper-button-prev,
-.swiper-button-prev2,
-.swiper-button-prev3 {
+.swiper-button-p {
     margin-top: 0;
     margin-right: 25px;
     color: transparent;
@@ -273,9 +331,7 @@ padding-bottom: 50px;
     background-image: url("../img/arrow-left/arrow-left.svg");
 }
 
-.swiper-button-next,
-.swiper-button-next2,
-.swiper-button-next3 {
+.swiper-button-n {
     margin-top: 0;
     color: transparent;
     width: 50px;
@@ -284,9 +340,15 @@ padding-bottom: 50px;
     background-image: url("../img/arrow-right/arrow-right.svg");
 }
 
-/* .swiper-button-lock {
-
-} */
+@media screen and (max-width: 500px) {
+    .swiper-button-p {
+        transform: scale(0.75);
+        margin-right: 5px;
+    }
+    .swiper-button-n {
+        transform: scale(0.75);
+    }
+}
 
 .swiper-container {
     width: 99%;
@@ -325,7 +387,7 @@ padding-bottom: 50px;
 .salesChild {
     position: absolute;
     top: -23%;
-    right: -7%;
+    right: -5%;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -342,6 +404,7 @@ padding-bottom: 50px;
 
 .salesChild--no-magrin {
     margin-left: 0px;
+    position: static;
 }
 
 .slideTitle {
@@ -462,6 +525,16 @@ padding-bottom: 50px;
     border: 0;
 }
 
+@media screen and (max-width: 600px) {
+    .choose-order {
+        position: absolute;
+        width: 172px;
+        height: 42px;
+        left: 25%;
+        top: 458px;
+    }
+}
+
 .listStyle li {
     position: relative;
     padding: 5px 0 0 15px;
@@ -491,8 +564,19 @@ padding-bottom: 50px;
 
 
 .socialMedia {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .socialMedia {
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .titleBlock3 {
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 .socialMedia > a {
@@ -521,9 +605,6 @@ align-items: center;
 }
 
 .video>ul>li {
-font-family: Ubuntu;
-font-style: normal;
-font-weight: normal;
 font-size: 18px;
 margin-top: 6px;
 }
@@ -542,9 +623,41 @@ margin-top: 6px;
     margin-top: 60px;
 }
 
+@media screen and (max-width: 600px) {
+    .video>ul {
+        margin-left: 20px;
+    }
+    .video>ul>li:nth-child(even) {
+        list-style-image: none;
+        list-style-position: none;
+    }
+    .video>ul>li:nth-child(odd) {
+        list-style-type: circle;
+        list-style-image: none;
+        color: #64B42D;
+    }
+    .foot3 {
+        margin-top: 20px;
+    }
+    .video>ul>li>span {
+        line-height: 16px;
+        color: #2C2C2C;
+        }
+
+        .order3 button, .order3 input {
+            margin-top: 15px;
+            margin: 0 auto;
+        }
+
+        .salesChild--no-magrin {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+}
+
+
 .zapishi3 {
-    font-family: Ubuntu;
-    font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 37px;
@@ -552,6 +665,13 @@ margin-top: 6px;
     color: #64B42D;
 }
 
+@media screen and (max-width: 600px) {
+    .foot3 {
+        margin-top: 10px;
+        text-align: center;
+        position: relative;
+    }
+}
 .order3 {
     display: flex;
     flex-wrap: wrap;
@@ -691,19 +811,6 @@ letter-spacing: 0.05em;
     margin-top: 35px;
     max-width: 960px;
 }
-
-/* @media (max-width: 575.98px) { 
-    swiper-container2 {
-        margin-top: 35px;
-        max-width: 82%;
-    }
- }
-
-@media (max-width: 767.98px) { ... }
-
-@media (max-width: 991.98px) { ... }
-
-@media (max-width: 1199.98px) { ... } */
 
 .slider2--slide {
 text-align: center;
