@@ -78,9 +78,8 @@
         <img src="./img/лендинг айнекст_new2 1.png" class="head-trinity-img" />
     </header>
     <main>
-        <section class="section1">
+        <!-- <section class="section1">
             <img class="sect1-pic" src="img/main/pic.png" alt="main">
-            <!-- <div class="sect1-pic"></div> -->
             <div class="wrapper">
                 <div class="block1">
                     <div class="leftSide">
@@ -100,11 +99,6 @@
                         <button type="button" class="take-order" data-toggle="modal"
                             data-target="#exampleModalCenter">подать заявку</button>
                     </div>
-                    <!-- <div class="balls">
-                        <div class="slon"></div>
-                        <div class="girl"></div>
-                        <div class="boy"></div>
-                    </div> -->
 
                 </div>
             </div>
@@ -328,8 +322,9 @@
                 </div>
 
                 <div class="video">
-                    <video poster="img/video.png" controls="controls">
-                        <source src="#"></video>
+                    <iframe width="635" height="380" src="https://www.youtube.com/embed/3a-Njo4pWbk" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     <ul>
                         <li><span>Игровая форма обучения</span></li>
                         <li></li>
@@ -349,7 +344,9 @@
                     </ul>
                 </div>
                 <div class="foot3">
-                    <div class="salesChild salesChild--no-magrin">бонус</div><br>
+                    <div class="text-left1">
+                        <div class="salesChild salesChild--no-magrin">бонус</div>
+                    </div>
                     <strong class="zapishi3">получите бесплатное занятие!</strong>
                     <form class="order3">
                         <input class="telInput" type="tel" name="phone" placeholder="(+380) _________">
@@ -362,13 +359,12 @@
             </div>
         </section>
 
-        <!-- <section class="">
-
-            <div class="section4">
+        <section class="section4">
+            <div class="flex-wrap-relative">
                 <div class="lego1"></div>
 
                 <div class="wrapper">
-                    <h2 class="itcours">мы развиваем:</h2>
+                    <h2 class=" ">мы развиваем:</h2>
                     <div class="list4">
                         <div class="cell4 list4-1">
                             <div class="list4-img1"><img class="list4-img1" src="img/1.png"></div>
@@ -436,7 +432,7 @@
         <section class="section5">
             <div class="wrapper">
                 <h2 class="itcours">наши преподаватели</h2>
-                 <div class="slider2">
+                <div class="slider2">
                     <div class="swiper-button-center">
                         <div class="swiper-button-prev2 swiper-button-p"></div>
                     </div>
@@ -444,34 +440,44 @@
                     <div class="swiper-container2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide  slider2--slide">
-                                <img src="/img/Ellipse 1.png" alt="photo">
-                                <div class="swiper2--text-teacher">Татьяна Котлубей</div>
+                                <div>
+                                    <img src="/img/Ellipse 1.png" alt="photo">
+                                    <div class="swiper2--text-teacher">Татьяна Котлубей</div>
+                                </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
-                                <img src="/img/Ellipse 2.png" alt="photo">
-                                <div class="swiper2--text-teacher">Владимир Лысых</div>
+                                <div>
+                                    <img src="/img/Ellipse 2.png" alt="photo">
+                                    <div class="swiper2--text-teacher">Владимир Лысых</div>
+                                </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
-                                <img src="/img/Ellipse 3.png" alt="photo">
-                                <div class="swiper2--text-teacher">Татьяна Меняйло</div>
+                                <div>
+                                    <img src="/img/Ellipse 3.png" alt="photo">
+                                    <div class="swiper2--text-teacher">Татьяна Меняйло</div>
+                                </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
-                                <img src="/img/Ellipse 4-1.png" alt="photo">
-                                <div class="swiper2--text-teacher">Владимир Гагарин</div>
+                                <div>
+                                    <img src="/img/Ellipse 4-1.png" alt="photo">
+                                    <div class="swiper2--text-teacher">Владимир Гагарин</div>
+                                </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
-                                <img src="/img/Ellipse 4.png" alt="photo">
-                                <div class="swiper2--text-teacher text-teacher--short">Анастасия Пономарева</div>
+                                <div>
+                                    <img src="/img/Ellipse 4.png" alt="photo">
+                                    <div class="swiper2--text-teacher text-teacher--short">Анастасия Пономарева</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="swiper-button-center">
                         <div class="swiper-button-next2 swiper-button-n"></div>
                     </div>
+
                 </div>
-        </div>
-        </section>
+            </div>
+        </section> -->
 
         <div class="wrapper">
             <section class="section6">
@@ -537,7 +543,7 @@
             </section>
         </div>
 
-        <section class="section8">
+        <!-- <section class="section8">
             <div class="wrapper">
                 <div class="section8--flex">
                     <div>
@@ -638,52 +644,53 @@
         </footer> -->
 
     </main>
-    <!-- Initialize Swiper -->
+
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            direction: 'horizontal',
-            slidesPerView: 1,
-            spaceBetween: 1,
-            slidesPerGroup: 1,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            cssMode: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 2,
-                    spaceBetween: 5,
-
-                },
-                1000: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 3,
-                    spaceBetween: 5,
-                },
-                1100: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 3,
-                    spaceBetween: 30,
-                },
-            },
-        });
-
-        // var swiper2 = new Swiper('.swiper-container2', {
-        //     cssMode: true,
-        //     slidesPerView: 2,
-        //     spaceBetween: 30,
+        // var swiper = new Swiper('.swiper-container', {
+        //     direction: 'horizontal',
+        //     slidesPerView: 1,
+        //     spaceBetween: 1,
         //     slidesPerGroup: 1,
         //     loop: true,
         //     loopFillGroupWithBlank: true,
+        //     cssMode: true,
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //         clickable: true,
+        //         dynamicBullets: true,
+        //     },
+        //     navigation: {
+        //         nextEl: '.swiper-button-next',
+        //         prevEl: '.swiper-button-prev',
+        //     },
+        //     breakpoints: {
+        //         600: {
+        //             slidesPerView: 2,
+        //             slidesPerGroup: 2,
+        //             spaceBetween: 5,
+
+        //         },
+        //         1000: {
+        //             slidesPerView: 3,
+        //             slidesPerGroup: 3,
+        //             spaceBetween: 5,
+        //         },
+        //         1100: {
+        //             slidesPerView: 3,
+        //             slidesPerGroup: 3,
+        //             spaceBetween: 30,
+        //         },
+        //     },
+        // });
+
+        // var swiper2 = new Swiper('.swiper-container2', {
+        //     direction: 'horizontal',
+        //     slidesPerView: 2,
+        //     spaceBetween: 30,
+        //     slidesPerGroup: 2,
+        //     loop: true,
+        //     loopFillGroupWithBlank: true,
+        //     cssMode: true,
 
         //     navigation: {
         //         nextEl: '.swiper-button-next2',
@@ -691,36 +698,34 @@
         //     },
 
         //     breakpoints: {
-        //         // when window width is >= 320px
-        //         320: {
+        //         500: {
         //             slidesPerView: 3,
-        //             spaceBetween: 20
+        //             slidesPerGroup: 1,
         //         },
-        //         // when window width is >= 480px
-        //         767: {
+        //         915: {
         //             slidesPerView: 4,
-        //             spaceBetween: 30
+        //             spaceBetween: 50,
+        //             slidesPerGroup: 1,
         //         },
-        //         // when window width is >= 640px
-        //         1199: {
+        //         1135: {
         //             slidesPerView: 5,
-        //             spaceBetween: 40
+        //             slidesPerGroup: 1,
         //         }
         //     }
         // });
 
-        // var swiper3 = new Swiper('.swiper-container3', {
-        //     cssMode: true,
-        //     navigation: {
-        //         nextEl: '.swiper-button-next3',
-        //         prevEl: '.swiper-button-prev3',
-        //     },
-        //     pagination: {
-        //         el: '.swiper-pagination3'
-        //     },
-        //     mousewheel: true,
-        //     keyboard: true,
-        // });
+        var swiper3 = new Swiper('.swiper-container3', {
+            cssMode: true,
+            navigation: {
+                nextEl: '.swiper-button-next3',
+                prevEl: '.swiper-button-prev3',
+            },
+            pagination: {
+                el: '.swiper-pagination3'
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
 
         // document.querySelectorAll('section9--telInput').checkValidity()
 
@@ -728,26 +733,6 @@
         //TODO
         // document.getElementById('submit').disabled
 
-        // $(function () {
-        //     $('#form').validate({
-        //         rules: {
-        //             firstname: {
-        //                 required: true,
-        //                 minlength: 2
-        //             }
-        //         },
-        //         messages: {
-        //             firstname: {
-        //                 required: "Поле 'Имя' обязательно к заполнению",
-        //                 minlength: "Введите не менее 2-х символов в поле 'Имя'"
-        //             },
-        //             email: {
-        //                 required: "Поле 'Email' обязательно к заполнению",
-        //                 email: "Необходим формат адреса email"
-        //             }
-        //         }
-        //     });
-        // });
 
     </script>
 </body>

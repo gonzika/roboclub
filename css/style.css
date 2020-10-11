@@ -9,7 +9,19 @@ header {
     background-color: #eaeaea;
 }
 
+h2 {
+    font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
 
+text-transform: uppercase;
+
+/* TEXT */
+
+color: #2C2C2C;
+}
 
 .wrapper, .head-trinity-img {
     max-width: 1160px;
@@ -251,6 +263,10 @@ padding-bottom: 50px;
     line-height: 150%;
     letter-spacing: 0.05em;
     color: #919191;
+}
+
+.text-left1 {
+    text-align: left;
 }
 
 @media screen and (max-width: 799px) {
@@ -649,11 +665,6 @@ margin-top: 6px;
             margin: 0 auto;
         }
 
-        .salesChild--no-magrin {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
 }
 
 
@@ -671,7 +682,11 @@ margin-top: 6px;
         text-align: center;
         position: relative;
     }
+    .text-left1 {
+        text-align: right;
+    }
 }
+
 .order3 {
     display: flex;
     flex-wrap: wrap;
@@ -714,10 +729,13 @@ background: url("../img/5f2d2656b3012.png");
 }
 
 .section4 {
-    margin-top: 35px;
+    margin-top: 65px;
+}
+
+.flex-wrap-relative {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    position: relative;    
 }
 
 .lego1 {
@@ -748,6 +766,7 @@ background: url("../img/5f2d2656b3012.png");
     .lego2 {
         display: none;
     }
+
 }
 
 .cell4 {
@@ -767,6 +786,23 @@ background: url("../img/5f2d2656b3012.png");
     margin-top: 54px;
     margin-bottom: 30px;
     justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+    .list4 {
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1100px) {
+    .section4 .wrapper {
+        text-align: center;
+    }
+    .list4 {
+        justify-content: center;
+        text-align: left;
+    }
 }
 
 .list4-img1 {
@@ -808,13 +844,27 @@ letter-spacing: 0.05em;
 }
 
 .swiper-container2 {
-    margin-top: 35px;
-    max-width: 960px;
+    max-width: 82%;
 }
 
 .slider2--slide {
 text-align: center;
 max-width: 160px;
+}
+
+@media (max-width: 1135px) {
+    .swiper-container2 {
+        max-width: 70%;
+    }
+
+    .slider2--slide img {
+        width: 100%;
+    }
+
+    .slider2 {
+        justify-content: space-around;
+        margin-top: 35px;
+    }
 }
 
 
@@ -1112,4 +1162,12 @@ footer {
     .dog3, .section9--left, .section7--right {
         opacity: 0.75;
     }
+
+    .dog3 {
+        transform: scale(0.5);
+        right: -52px;
+        top: 4px;
+        z-index: -5;
+        background: url("../img/5f2d2656b3012.png");
+        }
 }
