@@ -484,7 +484,7 @@
                 <h2 class="itcours">Мероприятия</h2>
 
                 <div class="swiper--nav">
-                    <div class="row3"></div>
+                    <div class="row3 start"></div>
                     <div class="row3 row-center">
                         <div class="swiper-pagination3"></div>
                     </div>
@@ -529,6 +529,30 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="swiper-container4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/S 1-1.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-14.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-10.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-13.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-12.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-9.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S 1.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-11.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-1.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-7.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-5.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-3.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S 2.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S 1-1.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-6.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-4.jpg" alt="foto"></div>
+                        <div class="swiper-slide"><img src="img/S-11.jpg" alt="foto"></div>
+                    </div>
+                </div>
+
             </section>
 
             <section class="section7">
@@ -721,10 +745,37 @@
                 prevEl: '.swiper-button-prev3',
             },
             pagination: {
+                el: '.swiper-pagination3',
+                dynamicBullets: true,
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        var swiper4 = new Swiper('.swiper-container4', {
+            cssMode: true,
+            direction: 'horizontal',
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: '.swiper-button-next3',
+                prevEl: '.swiper-button-prev3',
+            },
+            pagination: {
                 el: '.swiper-pagination3'
             },
             mousewheel: true,
             keyboard: true,
+
+            breakpoints: {
+                800: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20,
+                }
+            }
+
         });
 
         // document.querySelectorAll('section9--telInput').checkValidity()
