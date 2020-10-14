@@ -44,7 +44,6 @@ color: #2C2C2C;
     position: absolute;
     right: 0;
     bottom: -45px;
-    /* background-image: url("../img/main/pic.png"); */
     z-index: -5;
 }
 
@@ -271,7 +270,6 @@ padding-bottom: 50px;
 
 @media screen and (max-width: 799px) {
     .itcours {
-        font-size: 18px;
         line-height: 20px;
     }
     
@@ -290,7 +288,7 @@ padding-bottom: 50px;
     }
 }
 
-.swiper-pagination, .swiper-pagination3 {
+.swiper-pagination {
     display: inline-flex;
     align-items: center;
     text-align: center;
@@ -336,7 +334,7 @@ padding-bottom: 50px;
      margin-right: 15px;
  }
 
-.swiper-button-p {
+.swiper-button-p  {
     margin-top: 0;
     margin-right: 25px;
     color: transparent;
@@ -359,7 +357,7 @@ padding-bottom: 50px;
 @media screen and (max-width: 500px) {
     .swiper-button-p {
         transform: scale(0.75);
-        margin-right: 5px;
+        margin-right: 0px;
     }
     .swiper-button-n {
         transform: scale(0.75);
@@ -886,10 +884,11 @@ margin-top: 20px;
     margin: 0 0;
 }
 
-.swiper-container4 {
+.slider4 {
     display: none;
-    
 }
+
+
 
 .swiper-container3 {
     max-width: 100%;
@@ -956,14 +955,24 @@ margin-top: 20px;
 }
 
 @media (max-width: 1175px) {
-    .swiper-container3 {
+    .swiper-container3,
+    .section6 .swiper--nav {
         display: none;
     }
 
+    .slider4 {
+        display: flex;
+    }
+
     .swiper-container4 {
-        display: block;
-        width: 80%;
+        max-width: 80%;
         margin: 0 auto;
+        text-align: center;
+    }
+
+    .section6 {
+        text-align: center;
+        padding: 25px 0;
     }
 
     .section6 .row-center {
@@ -976,19 +985,27 @@ margin-top: 20px;
     }
 
     .swiper-container4 img {
-        max-width: 100%;
+        max-width: 99%;
       }
 }
 
 @media (max-width: 800px) {
-    .swiper-container4 img {
-        width: 100%;
+    .swiper-container4 .swiper-slide {
+        text-align: center;
       }
+
+      .section6 .row-end {
+          max-width: 100%;
+      }
+
+      .section6 .row-center,
+      .section6 .start {
+        display: none;
+    }
 
       .swiper--nav {
           justify-content: center;
       }
-
 }
 
 @media (max-width: 500px) {
@@ -999,13 +1016,12 @@ margin-top: 20px;
 
 .section7 {
     padding-top: 25px;
-    display: flex;
-    justify-content: start;
     position: relative;
 }
 
+
+
 .h2--big {
-    font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 37px;
@@ -1018,18 +1034,37 @@ margin-top: 55px;
 margin-bottom: 25px;
 }
 
-.grey7 {
+.padd-bot-55 {
     padding-bottom: 55px;
 }
 
-.section7--right {
-    background-image: url("../img/Слой 0 1.png");
-    width: 359px;
-    height: 275px;
+.section7__boy-bg {
     right: 15px;
-    position: absolute;
     bottom: 0px;
     z-index: -5;
+    max-width: 100%;
+    position: absolute;
+    z-index: -5;
+}
+
+@media (max-width: 799px) {
+    .section7__boy-bg {
+        opacity: 0.55;
+        bottom: -15px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .white-shadow {
+        font-weight: 700;
+        text-shadow: 1px 1px 2px white, 0px 1px 2px white;
+        color: black;
+    }
+
+    .section7 {
+        padding-top: 0;
+        text-align: center;
+    }
 }
 
 .section8 {
@@ -1040,6 +1075,7 @@ margin-bottom: 25px;
 .section8--flex {
     display: flex;
     justify-content: space-around;
+    color: #FFFFFF;
 }
 
 .section9--flex {
@@ -1048,20 +1084,19 @@ margin-bottom: 25px;
 position: relative;
 }
 
-.section8 .section8--flex>div {
-font-weight: bold;
+.sect8-num {
+font-weight: 700;
 font-size: 96px;
 line-height: 110px;
 letter-spacing: 0.025em;
-color: #FFFFFF;
 text-align: center;
 }
 
-.section8--flex p {
+.sect8-text {
     font-size: 24px;
-line-height: 28px;
-text-align: center;
-letter-spacing: 0.025em;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.025em;
 }
 
 .section9 {
@@ -1081,8 +1116,6 @@ letter-spacing: 0.025em;
 .section9--right {
     text-align: center;
     position: relative;
-    right: 0;
-    margin-right: 15px;
 }
 
 .section9--h2 {
@@ -1190,9 +1223,18 @@ footer {
  }
 
  @media screen and (max-width: 799px) {
-    .section8--flex {
-        transform: scale(.75);
+    .sect8-num {
+        font-size: 40px;
+        line-height: 60px;
     }
+    
+    .sect8-text {
+        font-size: 12px;
+        line-height: 0px;
+        text-align: center;
+        letter-spacing: 0;
+    }
+
     .section8 {
         padding: 20px 0;
     }
@@ -1202,7 +1244,7 @@ footer {
         right: 0;
     }
 
-    .dog3, .section9--left, .section7--right {
+    .dog3, .section9--left, .section7__boy-bg {
         opacity: 0.75;
     }
 
