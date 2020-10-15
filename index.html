@@ -373,11 +373,16 @@
                         <div class="salesChild salesChild--no-magrin">бонус</div>
                     </div>
                     <strong class="zapishi3">получите бесплатное занятие!</strong>
-                    <form class="order3">
-                        <input class="telInput" type="tel" name="phone" placeholder="(+380) _________">
-                        <button type="button" class="take-order" data-toggle="modal" data-target="#exampleModalCenter2"
-                            disabled>записаться</button>
+
+                    <form class="order3" id="order3" method="POST">
+                        <input class="telInput form-control" type="text" name="phone" placeholder="(+380) _________"
+                            pattern="[0-9_-]{9}" required data-target="order3" maxlength="9"
+                            onkeyup="makeNodisable('order3 but3')" title="Введите 9 цифр номера телефона">
+
+                        <button type="button" id="but3" class="take-order" data-toggle="modal"
+                            data-target="#exampleModalCenter2" disabled>записаться</button>
                     </form>
+
                     <div class="dog3"></div>
                 </div>
 
@@ -688,15 +693,16 @@
                     <div class="section9--right">
                         <h2 class="section9--h2 white-shadow">остались вопросы?</h2>
                         <div class="itcours-grey white-shadow">оставьте номер телефона и мы перезвоним Вам!</div>
-                        <form id="form1" method="POST">
+
+                        <form id="form9" method="POST">
                             <div><input class="section9--telInput form-control" type="text" name="firstname"
                                     placeholder="ваше имя">
                             </div>
                             <div><input class="section9--telInput form-control" type="text" name="phone"
-                                    placeholder="(+380) _________" pattern="[0-9_-]{9}" autofocus required
-                                    title="Введите 9 цифр номера телефона">
+                                    placeholder="(+380) _________" pattern="[0-9_-]{9}" required maxlength="9"
+                                    onkeyup="makeNodisable('form9 but9')" title="Введите 9 цифр номера телефона">
                             </div>
-                            <button type="submit" id="submit" class="take-order take-order--9" data-toggle="modal"
+                            <button type="button" id="but9" class="take-order take-order--9" data-toggle="modal"
                                 data-target="#exampleModalCenter2" disabled>обратный звонок</button>
                         </form>
                     </div>
@@ -865,18 +871,20 @@
         });
 
 
-        //szukaje 1j element
-        const selectElement = document.querySelector('input');
-        const form = document.querySelector('#form1');
 
-        selectElement.addEventListener('change', () => {
+
+        function makeNodisable(data) {
+            data = data.split(' ')
+            console.log(data)
+            form = document.getElementById(data[0])
             if (form.checkValidity()) {
-                document.querySelector('.take-order--9').disabled = false;
+                console.log('111');
+                document.getElementById(data[1]).disabled = false;
             }
             else {
-                console.log('!!!')
+                console.log('!!!');
             }
-        });
+        };
 
     </script>
 </body>
