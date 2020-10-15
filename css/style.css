@@ -5,6 +5,19 @@ body {
     color: #2C2C2C;
 }
 
+button, a {
+    transition: all .3s ease-in-out;
+}
+
+button:active {
+    opacity: 0.5;
+    color: #2DC218;
+}
+
+button:focus {
+    outline: none;
+}
+
 header {
     background-color: #eaeaea;
 }
@@ -36,6 +49,9 @@ color: #2C2C2C;
 
 .section1 {
     padding: 30px 0;
+}
+
+.section1 .wrapper {
     position: relative;
 }
 
@@ -93,6 +109,7 @@ color: #2C2C2C;
     font-size: 18px;
     letter-spacing: 0.05em;
     margin-bottom: 30px;
+    max-width: 340px;
 }
 
 .zapishi-logo {
@@ -166,7 +183,7 @@ color: #2C2C2C;
     background: #64B42D;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    border: 0;
+    border: 2px solid transparent;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -176,6 +193,11 @@ color: #2C2C2C;
     color: #FFFFFF;
 }
 
+.take-order:hover, .take-order:disabled {
+    border: 2px solid #64B42D;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    background: rgba(100, 180, 45, 0.65);   
+}
 
 
 /* .balls {
@@ -334,24 +356,47 @@ padding-bottom: 50px;
      margin-right: 15px;
  }
 
-.swiper-button-p  {
-    margin-top: 0;
-    margin-right: 25px;
-    color: transparent;
-    width: 50px;
-    height: 50px;
-    position: unset;
-    align-items: center;
-    background-image: url("../img/arrow-left/arrow-left.svg");
+.swiper-button svg {
+    fill: #64B42D;
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+    border-radius: 50%;
+    
 }
 
-.swiper-button-n {
-    margin-top: 0;
-    color: transparent;
-    width: 50px;
-    height: 50px;
-    position: unset;
-    background-image: url("../img/arrow-right/arrow-right.svg");
+.swiper-button svg path {
+    stroke: #C3C3C3;
+    transition: all .3s ease-in-out;
+}
+
+.swiper-button:hover svg {
+    fill: #fff;
+    background-color: #64B42D;
+    transition: all .3s ease-in-out;
+}
+
+.swiper-button:hover path {
+    stroke: #64B42D;
+    /* fill: #64B42D; */
+    transition: all .3s ease-in-out;
+}
+
+.swiper__next {
+    margin-left: 25px;
+    transform: scaleX(-1);
+}
+
+.swiper-button-disabled svg {
+    fill: #C3C3C3;
+}
+
+.swiper-button-disabled:hover svg {
+    fill: #C3C3C3;
+    background-color: white;
+}
+
+.swiper-button-disabled:hover svg path {
+    stroke: #C3C3C3;
 }
 
 @media screen and (max-width: 500px) {
@@ -371,6 +416,7 @@ padding-bottom: 50px;
 
 .slider1--slide {
     display: flex;
+    border-radius: 15px;
 }
 
 .slide1-container {
@@ -381,21 +427,29 @@ padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
     border-radius: 15px;
     padding: 10% 5% 5% 10%;
 }
 
 .slide1-container:hover {
     transition: all .3s ease-in-out;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .slideHeader {
     position: relative;
     height: 33.33%;
-    
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.slide__border {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 35%;
+    height: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .salesChild {
@@ -536,7 +590,14 @@ padding-bottom: 50px;
     background: #FBC901;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    border: 0;
+    border: 1px solid transparent;
+}
+
+.choose-order:hover {
+    background: rgba(251, 201, 1, 0.55);
+border: 1px solid #FBC901;
+box-sizing: border-box;
+box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 @media screen and (max-width: 600px) {
@@ -861,7 +922,7 @@ max-width: 160px;
 
     .slider2 {
         justify-content: space-around;
-        margin-top: 35px;
+        margin-top: 20px;
     }
 }
 
@@ -894,7 +955,9 @@ margin-top: 20px;
     max-width: 100%;
 }
 
-
+.swiper-container2 .swiper-slide {
+    text-align: center;
+}
 
 .swiper-container3 .swiper-slide {
     text-align: center;
@@ -954,6 +1017,12 @@ margin-top: 20px;
     margin-top: 18px;
 }
 
+.slider4__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
 @media (max-width: 1175px) {
     .swiper-container3,
     .section6 .swiper--nav {
@@ -961,12 +1030,15 @@ margin-top: 20px;
     }
 
     .slider4 {
-        display: flex;
+        display: block;
+    }
+
+    .slider4 .swiper__next {
+        margin: 0;
     }
 
     .swiper-container4 {
-        max-width: 80%;
-        margin: 0 auto;
+        max-width: 100%;
         text-align: center;
     }
 
@@ -985,7 +1057,7 @@ margin-top: 20px;
     }
 
     .swiper-container4 img {
-        max-width: 99%;
+        max-width: 100%;
       }
 }
 
@@ -1029,9 +1101,13 @@ margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.take-order7 {
+/* .take-order7 {
 margin-top: 55px;
 margin-bottom: 25px;
+} */
+
+.padd-top-25 {
+    padding-top: 25px;
 }
 
 .padd-bot-55 {
@@ -1058,7 +1134,7 @@ margin-bottom: 25px;
     .white-shadow {
         font-weight: 700;
         text-shadow: 1px 1px 2px white, 0px 1px 2px white;
-        color: black;
+        color: #2C2C2C;
     }
 
     .section7 {
@@ -1100,7 +1176,7 @@ text-align: center;
 }
 
 .section9 {
-    margin-top: 90px;
+    padding-top: 90px;
 }
 
 .section9--left {
@@ -1131,6 +1207,7 @@ text-align: center;
 }
 
 .section9--telInput {
+    display: inline;
     width: 350px;
     height: 58px;
     background: #FFFFFF;
@@ -1149,6 +1226,13 @@ text-align: center;
     padding-left: 42px;
     margin-bottom: 26px;
 }
+
+.form-control[type=text]:valid {
+    color: green
+   }
+   .form-control[type=text]:invalid {
+    color: red
+   }
 
 .take-order--9 {
     margin-bottom: 23px;
@@ -1178,7 +1262,7 @@ footer span {
 }
 
 footer {
-    margin: 100px 0;
+    padding: 100px 0;
 }
 
 .modal-body .row img {
@@ -1235,7 +1319,8 @@ footer {
         letter-spacing: 0;
     }
 
-    .section8 {
+    .section8, .section9, footer, .section2,
+    .section5, .section6  {
         padding: 20px 0;
     }
 
@@ -1254,5 +1339,9 @@ footer {
         top: 4px;
         z-index: -5;
         background: url("../img/5f2d2656b3012.png");
-        }
+    }
+
+    footer .itcours {
+        text-align: center;
+    }
 }
