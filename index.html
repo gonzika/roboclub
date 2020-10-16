@@ -31,34 +31,37 @@
     <link rel="stylesheet" href="./css/style.css" />
 
     <script src="https://kit.fontawesome.com/c9271e9314.js" crossorigin="anonymous"></script>
-    <!-- <script src="script/jquery.validate.min.js"></script> -->
+    <script src="script/jquery.maskedinput.min.js"></script>
 
 </head>
 
 <body>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="modal__take-order">
-                        <div><input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя">
-                        </div>
-                        <div><input class="section9--telInput" type="tel" name="phone" placeholder="(+380) _________">
-                        </div>
-                        <p class="order-p"><img src="img/dino.png" alt="done"> поле не может быть пустым</p>
-                        <button type="button" class="take-order take-order--9" data-toggle="modal"
-                            data-target="#exampleModalCenter2" onclick="$('#exampleModalCenter').modal('hide')">подать
-                            заявку</button>
+                        <form id="formM" method="POST">
+                            <div><input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя">
+                            </div>
+                            <div><input class="section9--telInput" type="text" name="phone" id="phoneM"
+                                    placeholder="(+380) _________" required maxlength="9" data-form="formM butM"
+                                    onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
+                                    title="Введите 9 цифр номера телефона">
+                            </div>
+                            <!-- <p class="order-p"><img src="img/dino.png" alt="done"> поле не может быть пустым</p> -->
+                            <button type="button" id="butM" class="take-order take-order--9" data-toggle="modal"
+                                onclick="$('#exampleModalCenter').modal('hide')" data-target="#exampleModalCenter2"
+                                disabled>обратный звонок</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -75,7 +78,7 @@
     </div>
 
     <header>
-        <img src="./img/лендинг айнекст_new2 1.png" class="head-trinity-img" />
+        <img src="./img/header.png" alt="header" class="head-trinity-img" />
     </header>
     <main>
         <section class="section1">
@@ -108,8 +111,8 @@
             <div class="wrapper">
                 <div class="block2Head">
                     <div class="row3">
-                        <strong class="itcours">IT КУРСы</strong><br>
-                        <span class="itcours-grey">онлайн/оффлайн</span>
+                        <h2 class="itcours">IT КУРСы</h2>
+                        <p class="itcours-grey">онлайн/оффлайн</p>
                     </div>
                     <div class="row3 row-center">
                         <div class="swiper-pagination"></div>
@@ -149,7 +152,7 @@
                                 <div class="slideHeader">
                                     <div class="slideTitle">3d моделирование</div>
                                     <div class="slideChAge">дети 10 - 15 лет</div>
-                                    <img src="../img/slide1img.png" class="slide1img" />
+                                    <img src="../img/slide1img.png" alt="" class="slide1img" />
                                 </div>
                                 <div class="slide__border"></div>
                                 <div class="slideText">
@@ -170,7 +173,7 @@
 
                         <div class="swiper-slide slider1--slide">
                             <div class="slide1-container">
-                                <img src="../img/robohand.png" class="slide2img" />
+                                <img src="../img/robohand.png" alt="" class="slide2img" />
                                 <div class="slideHeader">
                                     <div class="slideTitle">робототехника</div>
                                     <div class="slideChAge">дети 7 - 14 лет</div>
@@ -201,7 +204,7 @@
                                     <div class="salesChild">акция -10%</div>
                                     <div class="slideTitle">программирование it-логика</div>
                                     <div class="slideChAge">дети 7 - 9 лет</div>
-                                    <img src="../img/PC.png" class="slide1img" />
+                                    <img src="../img/PC.png" alt="" class="slide1img" />
                                 </div>
                                 <div class="slide__border"></div>
                                 <div class="slideText">
@@ -226,7 +229,7 @@
                                     <div class="slideTitle">программирование
                                         для старших</div>
                                     <div class="slideChAge">дети 10 - 15 лет</div>
-                                    <img src="../img/slide1img.png" class="slide1img" />
+                                    <img src="../img/pc.png" alt="" class="slide1img" />
                                 </div>
                                 <div class="slide__border"></div>
                                 <div class="slideText">
@@ -254,7 +257,7 @@
                                 <div class="slideHeader">
                                     <div class="slideTitle">Интеллект JR</div>
                                     <div class="slideChAge">дети 5 - 6 лет</div>
-                                    <img src="../img/brain.png" class="slide1img" />
+                                    <img src="../img/brain.png" alt="" class="slide1img" />
                                 </div>
                                 <div class="slide__border"></div>
                                 <div class="slideText">
@@ -281,7 +284,7 @@
                                     <div class="slideTitle slideTitle--small-padding">университет
                                         третьего поколения</div>
                                     <div class="slideChAge">для взрослых</div>
-                                    <img src="../img/grandma.png" class="slide1img" />
+                                    <img src="../img/grandma.png" alt="" class="slide1img" />
                                 </div>
                                 <div class="slide__border"></div>
                                 <div class="slideText">
@@ -311,10 +314,10 @@
         <section class="section3">
             <div class="wrapper">
                 <div class="block3Head">
-                    <span class="titleBlock3">
+                    <div class="titleBlock3">
                         <h2 class="itcours">набор открыт!</h2>
                         <span class="itcours-grey">хотите узнать как проходят наши уроки?</span>
-                    </span>
+                    </div>
                     <div class="centerHead"></div>
                     <span class="socialMedia">
                         <a href="#">
@@ -347,24 +350,17 @@
                 </div>
 
                 <div class="video">
-                    <iframe width="635" height="380" src="https://www.youtube.com/embed/3a-Njo4pWbk" frameborder="0"
+                    <iframe class="video__iframe" src="https://www.youtube.com/embed/3a-Njo4pWbk"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <ul>
+                    <ul class="list3">
                         <li><span>Игровая форма обучения</span></li>
-                        <li></li>
                         <li><span>Полная творческая свобода</span></li>
-                        <li></li>
                         <li><span>Участие в робобатлах</span></li>
-                        <li></li>
                         <li><span>Высококвалифицированные преподаватели</span></li>
-                        <li></li>
                         <li><span>Уютные и комфортные классы</span></li>
-                        <li></li>
                         <li><span>Современная компьютерная техника</span></li>
-                        <li></li>
                         <li><span>Группы по 8-10 человек</span></li>
-                        <li></li>
                         <li><span>Удобное расписание</span></li>
                     </ul>
                 </div>
@@ -375,9 +371,10 @@
                     <strong class="zapishi3">получите бесплатное занятие!</strong>
 
                     <form class="order3" id="order3" method="POST">
-                        <input class="telInput form-control" type="text" name="phone" placeholder="(+380) _________"
-                            pattern="[0-9_-]{9}" required data-target="order3" maxlength="9"
-                            onkeyup="makeNodisable('order3 but3')" title="Введите 9 цифр номера телефона">
+
+                        <input class="telInput" type="text" name="phone" placeholder="(+380) _________" id="phone3"
+                            required maxlength="9" data-form="order3 but3" onkeyup="makeNodisable(this)"
+                            title="Введите 9 цифр номера телефона">
 
                         <button type="button" id="but3" class="take-order" data-toggle="modal"
                             data-target="#exampleModalCenter2" disabled>записаться</button>
@@ -397,7 +394,7 @@
                     <h2 class=" ">мы развиваем:</h2>
                     <div class="list4">
                         <div class="cell4 list4-1">
-                            <div class="list4-img1"><img class="list4-img1" src="img/1.png"></div>
+                            <div class="list4-img1"><img class="list4-img1" alt="#1" src="img/1.png"></div>
                             <div class="list-text1">
                                 <h3>ОБСТОЯТЕЛЬНОСТЬ</h3>
                                 Конструктивная деятельность очень тесно связана с развитием речи. С ребенком
@@ -406,7 +403,7 @@
                             </div>
                         </div>
                         <div class="cell4 list4-1">
-                            <div class="list4-img1"><img class="list4-img1" src="img/2.png"></div>
+                            <div class="list4-img1"><img class="list4-img1" alt="#2" src="img/2.png"></div>
                             <div class="list-text1">
                                 <h3>КРЕАТИВ</h3>
                                 Наглядно разбираются сложные для ребенка абстрактные понятия, которые есть в
@@ -416,7 +413,7 @@
                             </div>
                         </div>
                         <div class="cell4 list4-1">
-                            <div class="list4-img1"><img class="list4-img1" src="img/3.png"></div>
+                            <div class="list4-img1"><img class="list4-img1" alt="#3" src="img/3.png"></div>
                             <div class="list-text1">
                                 <h3>РЕЗУЛЬТАТ</h3>
                                 Помогаем развивать работоспособность и целеустремленность, поскольку позволяет детям
@@ -426,7 +423,7 @@
                             </div>
                         </div>
                         <div class="cell4 list4-1">
-                            <div class="list4-img1"><img class="list4-img1" src="img/4.png"></div>
+                            <div class="list4-img1"><img class="list4-img1" alt="#4" src="img/4.png"></div>
                             <div class="list-text1">
                                 <h3>КОМАНДНУЮ РАБОТУ</h3>
                                 Способствует сплочению детского коллектива, формированию чувства симпатии друг к
@@ -436,7 +433,7 @@
                             </div>
                         </div>
                         <div class="cell4 list4-1">
-                            <div class="list4-img1"><img class="list4-img1" src="img/5.png"></div>
+                            <div class="list4-img1"><img class="list4-img1" alt="#5" src="img/5.png"></div>
                             <div class="list-text1">
                                 <h3>МОЗГОВОЙ ШТУРМ</h3>
                                 Развивает и совершенствует память, внимание, мышление. Тренирует пальцы кистей рук -
@@ -445,7 +442,7 @@
                             </div>
                         </div>
                         <div class="cell4 list4-1">
-                            <div class="list4-img1"><img class="list4-img1" src="img/6.png"></div>
+                            <div class="list4-img1"><img class="list4-img1" alt="#6" src="img/6.png"></div>
                             <div class="list-text1">
                                 <h3>ВООБРАЖЕНИЕ</h3>
                                 LEGO способствует развитию у детей сенсорных представлений, так как используются
@@ -481,31 +478,31 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide  slider2--slide">
                                 <div>
-                                    <img src="/img/Ellipse 1.png" alt="photo">
+                                    <img src="/img/Ellipse1.png" alt="photo">
                                     <div class="swiper2--text-teacher">Татьяна Котлубей</div>
                                 </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
                                 <div>
-                                    <img src="/img/Ellipse 2.png" alt="photo">
+                                    <img src="/img/Ellipse2.png" alt="photo">
                                     <div class="swiper2--text-teacher">Владимир Лысых</div>
                                 </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
                                 <div>
-                                    <img src="/img/Ellipse 3.png" alt="photo">
+                                    <img src="/img/Ellipse3.png" alt="photo">
                                     <div class="swiper2--text-teacher">Татьяна Меняйло</div>
                                 </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
                                 <div>
-                                    <img src="/img/Ellipse 4-1.png" alt="photo">
+                                    <img src="/img/Ellipse4-1.png" alt="photo">
                                     <div class="swiper2--text-teacher">Владимир Гагарин</div>
                                 </div>
                             </div>
                             <div class="swiper-slide slider2--slide">
                                 <div>
-                                    <img src="/img/Ellipse 4.png" alt="photo">
+                                    <img src="/img/Ellipse4.png" alt="photo">
                                     <div class="swiper2--text-teacher text-teacher--short">Анастасия Пономарева</div>
                                 </div>
                             </div>
@@ -569,7 +566,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="swiper-slide3">
-                                <img src="img/S 1-1.jpg" alt="foto" class="swiper3__img1">
+                                <img src="img/S1-1.jpg" alt="foto" class="swiper3__img1">
                                 <img src="img/S-14.jpg" alt="foto" class="swiper3__img2">
                                 <img src="img/S-10.jpg" alt="foto" class="swiper3__img3">
                                 <img src="img/S-13.jpg" alt="foto" class="swiper3__img4">
@@ -579,7 +576,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-slide3">
-                                <img src="img/S 1.jpg" alt="foto" class="swiper3__img1">
+                                <img src="img/S1.jpg" alt="foto" class="swiper3__img1">
                                 <img src="img/S-11.jpg" alt="foto" class="swiper3__img2">
                                 <img src="img/S-1.jpg" alt="foto" class="swiper3__img3">
                                 <img src="img/S-7.jpg" alt="foto" class="swiper3__img4">
@@ -589,8 +586,8 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-slide3">
-                                <img src="img/S 2.jpg" alt="foto" class="swiper3__img1">
-                                <img src="img/S 1-1.jpg" alt="foto" class="swiper3__img2">
+                                <img src="img/S2.jpg" alt="foto" class="swiper3__img1">
+                                <img src="img/S1-1.jpg" alt="foto" class="swiper3__img2">
                                 <img src="img/S.jpg" alt="foto" class="swiper3__img3">
                                 <img src="img/S-6.jpg" alt="foto" class="swiper3__img4">
                                 <img src="img/S-4.jpg" alt="foto" class="swiper3__img5">
@@ -627,20 +624,20 @@
 
                     <div class="swiper-container4">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="img/S 1-1.jpg" alt="foto"></div>
+                            <div class="swiper-slide"><img src="img/S1-1.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-14.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-10.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-13.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-12.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-9.jpg" alt="foto"></div>
-                            <div class="swiper-slide"><img src="img/S 1.jpg" alt="foto"></div>
+                            <div class="swiper-slide"><img src="img/S1.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-11.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-1.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-7.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-5.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-3.jpg" alt="foto"></div>
-                            <div class="swiper-slide"><img src="img/S 2.jpg" alt="foto"></div>
-                            <div class="swiper-slide"><img src="img/S 1-1.jpg" alt="foto"></div>
+                            <div class="swiper-slide"><img src="img/S2.jpg" alt="foto"></div>
+                            <div class="swiper-slide"><img src="img/S1-1.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-6.jpg" alt="foto"></div>
                             <div class="swiper-slide"><img src="img/S-4.jpg" alt="foto"></div>
@@ -659,11 +656,11 @@
                     data-target="#exampleModalCenter">подключиться</button>
                 <div class="itcours-grey white-shadow padd-top-25 padd-bot-55">Подключите Тринити и воспользуйтесь
                     скидкой!</div>
-                <img src="img/Слой 0 1.png" alt="boy" class="section7__boy-bg">
+                <img src="img/boy1.png" alt="boy" class="section7__boy-bg">
             </section>
         </div>
 
-        <section class="section8">
+        <div class="section8">
             <div class="wrapper">
                 <div class="section8--flex">
                     <div>
@@ -684,7 +681,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <section class="section9">
             <div class="wrapper">
@@ -695,12 +692,11 @@
                         <div class="itcours-grey white-shadow">оставьте номер телефона и мы перезвоним Вам!</div>
 
                         <form id="form9" method="POST">
-                            <div><input class="section9--telInput form-control" type="text" name="firstname"
-                                    placeholder="ваше имя">
+                            <div><input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя">
                             </div>
-                            <div><input class="section9--telInput form-control" type="text" name="phone"
-                                    placeholder="(+380) _________" pattern="[0-9_-]{9}" required maxlength="9"
-                                    onkeyup="makeNodisable('form9 but9')" title="Введите 9 цифр номера телефона">
+                            <div><input class="section9--telInput" type="text" name="phone" id="phone9"
+                                    placeholder="(+380) _________" required maxlength="9" data-form="form9 but9"
+                                    onkeyup="makeNodisable(this)" title="Введите 9 цифр номера телефона">
                             </div>
                             <button type="button" id="but9" class="take-order take-order--9" data-toggle="modal"
                                 data-target="#exampleModalCenter2" disabled>обратный звонок</button>
@@ -796,11 +792,17 @@
                     slidesPerView: 3,
                     slidesPerGroup: 3,
                     spaceBetween: 5,
+                    pagination: {
+                        dynamicBullets: false,
+                    },
                 },
                 1100: {
                     slidesPerView: 3,
                     slidesPerGroup: 3,
                     spaceBetween: 30,
+                    pagination: {
+                        dynamicBullets: false,
+                    },
                 },
             },
         });
@@ -870,21 +872,42 @@
             }
         });
 
-
+        $("#phone9").mask("(+380) 9999999");
+        $("#phone3").mask("(+380) 9999999");
+        $("#phoneM").mask("(+380) 9999999");
 
 
         function makeNodisable(data) {
-            data = data.split(' ')
+            console.log(data.value.replace(/_/g, ""));
+            ln = data.value.replace(/_/g, "").length;
+            console.log(ln);
+            dataForm = data.dataset.form;
+            console.log(dataForm);
+            data = dataForm.split(' ')
             console.log(data)
             form = document.getElementById(data[0])
-            if (form.checkValidity()) {
+            if (form.checkValidity() & ln == 14) {
                 console.log('111');
                 document.getElementById(data[1]).disabled = false;
             }
             else {
-                console.log('!!!');
+                document.getElementById(data[1]).disabled = true;
             }
         };
+
+        validCount = 0;
+        function checkValidDragon(data) {
+            el = document.getElementById(data.id)
+            if (validCount == 0) {
+                let p = document.createElement('p');
+                p.className = "order-p";
+                p.innerHTML = "<img src='img/dino.png' alt='done'> поле не может быть пустым";
+
+                el.after(p);
+                validCount++;
+            }
+
+        }
 
     </script>
 </body>
