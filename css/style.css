@@ -36,7 +36,7 @@ text-transform: uppercase;
 color: #2C2C2C;
 }
 
-.wrapper, .head-trinity-img {
+.container, .head-trinity-img {
     max-width: 1160px;
     margin: 0 auto;
     display: block;
@@ -51,7 +51,7 @@ color: #2C2C2C;
     padding: 30px 0;
 }
 
-.section1 .wrapper {
+.section1 .container {
     position: relative;
 }
 
@@ -59,7 +59,7 @@ color: #2C2C2C;
     max-width: 100%;
     position: absolute;
     right: 0;
-    bottom: -45px;
+    bottom: -60px;
     z-index: -5;
 }
 
@@ -72,7 +72,7 @@ color: #2C2C2C;
 @media screen and (max-width: 770px) {
     .sect1-pic {
         transform: scale(-1, 1); 
-        right: none;
+        right: auto;
         left: 0;
     }
 }
@@ -80,8 +80,7 @@ color: #2C2C2C;
 @media screen and (max-width: 500px) {
     .sect1-pic {
         transform: scale(-1, 1); 
-        right: none;
-        /* scale: 0.4; */
+        right: auto;
     }
     .block1 {
         text-align: center;
@@ -199,47 +198,6 @@ color: #2C2C2C;
     background: rgba(100, 180, 45, 0.65);   
 }
 
-
-/* .balls {
-    width: 714px;
-    height: 547px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-image: url("../img/main/balls.png");
-    z-index: -5;
-}
-
-.slon {
-    width: 472px;
-    height: 457px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-image: url("../img/main/slon.png");
-    z-index: -4;
-}
-
-.girl {
-    width: 251px;
-    height: 547px;
-    position: absolute;
-    right: 250px;
-    bottom: 0;
-    background-image: url("../img/main/girl.png");
-    z-index: -3;
-}
-
-.boy {
-    width: 333px;
-    height: 403px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-image: url("../img/main/boy.png");
-    z-index: -2;
-} */
-
 .section2 {
     padding-top: 40px;
 }
@@ -256,12 +214,12 @@ padding-bottom: 50px;
     background: linear-gradient(to bottom, #eaeaea 0%, #f0f0f0 50%, #fff 100%);
 }
 
-.block2Head, .block3Head {
+.section-head {
     flex-wrap: wrap;
     margin: 45px 0;
 }
 
-.row-robo, .block2Head, .block3Head {
+.row-robo, .section-head {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -300,7 +258,7 @@ padding-bottom: 50px;
         line-height: 120%;
     }
 
-    .block2Head, .block3Head {
+    .section-head {
         flex-wrap: wrap;
         margin: 15px 0;
     }
@@ -381,7 +339,6 @@ padding-bottom: 50px;
 
 .swiper-button:hover path {
     stroke: #64B42D;
-    /* fill: #64B42D; */
     transition: all .3s ease-in-out;
 }
 
@@ -528,7 +485,6 @@ padding-bottom: 50px;
     top: 0;
     z-index: -5;
     max-width: 100%;
-    max-height: auto;
 }
 
 .slideText {
@@ -689,12 +645,22 @@ box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
     
 }
 
-.list3>li {
+.list3 li {
     font-size: 18px;
     margin-bottom: 30px;
     position: relative;
-    list-style-image: url("../img/list.png");
+    /* list-style-image: url("../img/list.png"); */
 }
+
+.list3 li:before {
+    background: url("../img/list.png");
+    content: " ";
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: -20px;
+    transform: translate(-50%, 0%);
+  }
 
 .list3 li:after {
     position: absolute;
@@ -702,14 +668,8 @@ box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
     width: 1px;
     bottom: -22px;
     content: "";
-    left: -13px;
+    left: -20px;
     top: 25px;
-  }
-
-  @-moz-document url-prefix() { 
-    .list3 li:after {
-        left: -17px;
-      }
   }
 
 .list3 li:last-child:after {content: none;}
@@ -812,15 +772,16 @@ background: url("../img/5f2d2656b3012.png");
 
 .section4 {
     margin-top: 65px;
+    position: relative;
 }
 
-.flex-wrap-relative {
+/* .flex-wrap-relative {
     display: flex;
     flex-wrap: wrap;
     position: relative;    
-}
+} */
 
-.lego1 {
+.section4 .container::before {
     background: url('../img/lego.png');
     width: 500px;
     height: 793px;
@@ -828,9 +789,10 @@ background: url("../img/5f2d2656b3012.png");
     z-index: -1;
     top: -22%;
     left: -3%;
+    content: "";
 }
 
-.lego2 {
+.section4 .container::after {
     background: url(../img/lego-1.png);
     width: 814px;
     height: 793px;
@@ -838,17 +800,15 @@ background: url("../img/5f2d2656b3012.png");
     z-index: -1;
     top: -28%;
     right: 0;
+    content: "";
 }
 
-@media (max-width: 992px) {
-    .lego1 {
-        display: none;
-    }
-    
-    .lego2 {
-        display: none;
-    }
 
+@media (max-width: 992px) {
+    .section4 .container::before,
+    .section4 .container::after {
+        content: none;
+    }
 }
 
 .cell4 {
@@ -878,7 +838,7 @@ background: url("../img/5f2d2656b3012.png");
 }
 
 @media (max-width: 1100px) {
-    .section4 .wrapper {
+    .section4 .container {
         text-align: center;
     }
     .list4 {
@@ -1052,7 +1012,7 @@ margin-top: 20px;
         display: none;
     }
 
-    .block2Head, .block3Head {
+    .section-head {
         margin: 15px 0;
     }
 
@@ -1369,7 +1329,7 @@ footer {
     padding: 50px 0;
     text-align: center;
 }
- footer .wrapper {
+ footer .container {
      padding: 0 15px;
  }
 
