@@ -670,8 +670,8 @@ line-height: 98%;
         margin-left: 20px;
     }
 
-    .list3 li:after {
-        content: none;
+    .list3 li:after, .list3 li:before {
+        display: none;
     }
 
     .list3 li {
