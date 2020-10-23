@@ -245,13 +245,15 @@ padding-bottom: 50px;
 }
 
 @media screen and (max-width: 799px) {
-    /* .itcours {
-        line-height: 20px;
-    } */
+    .itcours {
+        text-align: center;
+        font-size: 24px;
+    }
     
     .itcours-grey {
         font-size: 12px;
         line-height: 120%;
+        text-align: center;
     }
 
     .section-head {
@@ -995,7 +997,8 @@ letter-spacing: 0.05em;
 
 @media (max-width: 1175px) {
     .swiper-container3,
-    .section6 .swiper--nav {
+    .section6 .swiper--nav, 
+    .section6>.container>.itcours {
         display: none;
     }
 
@@ -1006,6 +1009,10 @@ letter-spacing: 0.05em;
     .slider4 {
         display: block;
     }
+
+    /* .slider4__nav .itcours {
+        margin: 0;
+    } */
 
     .slider4 .swiper__next {
         margin: 0;
@@ -1239,6 +1246,7 @@ letter-spacing: 0.05em;
 
 footer .itcours {
     margin-bottom: 45px;
+    text-align: left;
 } 
 
 footer span {
