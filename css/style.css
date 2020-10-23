@@ -227,7 +227,7 @@ padding-bottom: 50px;
 
 .itcours {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 28px;
     text-transform: uppercase;
 }
@@ -244,9 +244,9 @@ padding-bottom: 50px;
 }
 
 @media screen and (max-width: 799px) {
-    .itcours {
+    /* .itcours {
         line-height: 20px;
-    }
+    } */
     
     .itcours-grey {
         font-size: 12px;
@@ -589,10 +589,7 @@ line-height: 98%;
 }
 
 @media screen and (max-width: 600px) {
-    .socialMedia {
-        justify-content: center;
-        margin: 0 auto;
-    }
+    
     .titleBlock3 {
         text-align: center;
         margin: 0 auto;
@@ -600,7 +597,7 @@ line-height: 98%;
 }
 
 .socialMedia > a {
-    margin: 0 12px;
+    margin-right: 24px;
 }
 
 .socialMedia > a:hover{
@@ -617,6 +614,12 @@ line-height: 98%;
 .video__iframe {
     width: 635px;
     height: 380px;
+}
+
+@media screen and (max-width: 600px) {
+    .video__iframe {
+        width: 100%;
+    }
 }
 
 .list3 {
@@ -718,7 +721,7 @@ line-height: 98%;
 }
 
 .telInput {
-    width: 350px;
+    width: 100%;
     height: 58px;
     background: #FFFFFF;
     box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
@@ -1015,7 +1018,7 @@ letter-spacing: 0.05em;
     }
 
     .swiper-container4 img {
-        max-width: 100%;
+        max-width: 99%;
         height: 270px;
       }
 }
@@ -1130,6 +1133,12 @@ letter-spacing: 0.05em;
     position: relative;
 }
 
+@media screen and (max-width: 799px) {
+    .section9--flex {
+        display: block;
+    }
+}
+
 .sect8-num {
     font-weight: 700;
     font-size: 96px;
@@ -1150,9 +1159,8 @@ letter-spacing: 0.05em;
 }
 
 .section9--left {
-    background-image: url("../img/robots 1.png");
-    width: 365px;
-    height: 340px;
+    /* background-image: url("../img/robots 1.png"); */
+    max-width: 100%;
     position: absolute;
     left: 100px;
     top: 50px;
@@ -1184,7 +1192,7 @@ letter-spacing: 0.05em;
 
 .section9--telInput {
     display: inline;
-    width: 350px;
+    width: 100%;
     height: 58px;
     background: #FFFFFF;
     box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
@@ -1203,13 +1211,6 @@ letter-spacing: 0.05em;
     margin-bottom: 26px;
 }
 
-/* .form-control[type=text]:valid {
-    color: green
-   }
-   .form-control[type=text]:invalid {
-    color: red
-   } */
-
 .take-order--9 {
     margin: 23px 0;
 }
@@ -1223,8 +1224,12 @@ letter-spacing: 0.05em;
     margin-bottom: 15px;
 }
 
+footer .itcours {
+    margin-bottom: 45px;
+} 
+
 footer span {
-    margin: 45px 0;
+    margin-bottom: 45px;
 }
 
 .footer--right {
@@ -1324,8 +1329,11 @@ footer .container {
     }
 
     .section9--left {
-        left: initial;
-        right: 0;
+        left: 0;
+    }
+
+    .section9--h2 {
+        font-size: 30px;
     }
 
     .dog3, .section9--left, .section7__boy-bg {
@@ -1341,6 +1349,15 @@ footer .container {
     }
 
     footer .itcours {
-        text-align: center;
+        margin-bottom: 15px;
+        font-size: 30px;
     }
+
+    .socialMedia {
+        margin-bottom: 15px;
+    }
+}
+
+.telInput__box {
+    max-width: 350px;
 }
