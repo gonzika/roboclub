@@ -370,6 +370,13 @@ padding-bottom: 50px;
     }
 }
 
+@media screen and (max-width: 500px) {
+    .swiper-button svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
 .swiper-container {
     width: 99%;
     height: 540px;
@@ -1134,6 +1141,15 @@ letter-spacing: 0.05em;
         padding-top: 0;
         text-align: center;
     }
+
+    .padd-bot-55 {
+        padding-bottom: 15px;
+    }
+
+    .red-text {
+        color: red;
+    }
+
 }
 
 .section8 {
@@ -1355,6 +1371,7 @@ footer .container {
 
     .section9--h2 {
         font-size: 30px;
+        line-height: 1.2;
     }
 
     .dog3, .section9--left, .section7__boy-bg {
@@ -1383,7 +1400,7 @@ footer .container {
     width: 350px;
 }
 
-#form9 .telInput__box {
+#form9 .telInput__box, #formM .telInput__box {
     margin: 0 auto;
     max-width: 350px;
     width: auto;
@@ -1393,5 +1410,9 @@ footer .container {
     .section9--telInput, .telInput {
         font-size: 18px;
         padding-right: 15px;
+    }
+
+    .img-done--sm {
+        width: 33%;
     }
 }

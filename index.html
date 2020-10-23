@@ -31,7 +31,8 @@
     <link rel="stylesheet" href="./css/style.css" />
 
     <script src="https://kit.fontawesome.com/c9271e9314.js" crossorigin="anonymous"></script>
-    <script src="script/jquery.maskedinput.min.js"></script>
+    <!-- <script src="script/jquery.maskedinput.min.js"></script> -->
+    <script src="script/jquery.mask.js"></script>
 
 </head>
 
@@ -67,7 +68,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="row-robo row--modal">
-                        <div><img src="img/mdi_done.png" alt="done"></div>
+                        <img src="img/mdi_done.png" alt="done" class="img-done--sm">
                         <div class="order-text">
                             <h3 class="order-h3">заявка принята</h3>
                             <p class="order-p">С вами свяжутся в течение суток</p>
@@ -654,7 +655,8 @@
                 <div class="itcours-grey padd-bot-55 white-shadow">*только для абонентов Тринити</div>
                 <button class="take-order" type="button" data-toggle="modal"
                     data-target="#exampleModalCenter">подключиться</button>
-                <div class="itcours-grey white-shadow padd-top-25 padd-bot-55">Подключите Тринити и воспользуйтесь
+                <div class="itcours-grey white-shadow padd-top-25 padd-bot-55 red-text">Подключите Тринити и
+                    воспользуйтесь
                     скидкой!</div>
                 <img src="img/boy1.png" alt="boy" class="section7__boy-bg">
             </div>
@@ -861,6 +863,7 @@
         var swiper4 = new Swiper('.swiper-container4', {
             cssMode: true,
             slidesPerView: 1,
+            resistanceRatio: 2,
             pagination: {
                 el: '.swiper-pagination4',
                 clickable: true,
@@ -878,9 +881,13 @@
             }
         });
 
-        $("#phone9").mask("(+380) 9999999");
-        $("#phone3").mask("(+380) 9999999");
-        $("#phoneM").mask("(+380) 9999999");
+        // $("#phone9").mask("(+380) 9999999");
+        // $("#phone3").mask("(+380) 9999999");
+        // $("#phoneM").mask("(+380) 9999999");
+
+        $(document).ready(function () {
+            $('#phone3').mask('(+000) 0000000');
+        });
 
         function checkValidBtn(data) {
             console.log(data);
