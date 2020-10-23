@@ -32,7 +32,7 @@
 
     <script src="https://kit.fontawesome.com/c9271e9314.js" crossorigin="anonymous"></script>
     <!-- <script src="script/jquery.maskedinput.min.js"></script> -->
-    <script src="script/jquery.mask.js"></script>
+    <!-- <script src="script/jquery.mask.js"></script> -->
 
 </head>
 
@@ -49,8 +49,8 @@
                             </div>
                             <div class="for-dragon telInput__box">
                                 <input class="section9--telInput" type="text" name="phone" id="phoneM"
-                                    placeholder="(+380) _________" required maxlength="9" data-form="formM butM"
-                                    onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
+                                    placeholder="(+380) _________" required minlength="9" maxlength="16"
+                                    data-form="formM butM" onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
                                     title="Введите 9 цифр номера телефона">
                             </div> <button type="button" id="butM" class="take-order take-order--9"
                                 onclick="checkValidBtn(this)" data-target="#exampleModalCenter2" data-toggle=""
@@ -374,8 +374,9 @@
 
                         <div class="for-dragon telInput__box telInput__box--mr">
                             <input class="telInput" type="text" name="phone" placeholder="(+380) _________" id="phone3"
-                                required maxlength="9" data-form="order3 but3" onkeyup="makeNodisable(this)"
-                                onblur="checkValidDragon(this)" title="Введите 9 цифр номера телефона">
+                                required minlength="9" maxlength="16" data-form="order3 but3"
+                                onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
+                                title="Введите 9 цифр номера телефона">
                         </div>
 
                         <button type="button" id="but3" class="take-order" data-toggle="" onclick="checkValidBtn(this)"
@@ -700,8 +701,8 @@
                             </div>
                             <div class="for-dragon telInput__box">
                                 <input class="section9--telInput" type="text" name="phone" id="phone9"
-                                    placeholder="(+380) _________" required maxlength="9" data-form="form9 but9"
-                                    onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
+                                    placeholder="(+380) _________" required minlength="9" maxlength="16"
+                                    data-form="form9 but9" onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
                                     title="Введите 9 цифр номера телефона">
                             </div>
                             <button type="button" id="but9" class="take-order take-order--9" data-toggle=""
@@ -885,9 +886,11 @@
         // $("#phone3").mask("(+380) 9999999");
         // $("#phoneM").mask("(+380) 9999999");
 
-        $(document).ready(function () {
-            $('#phone3').mask('(+000) 0000000');
-        });
+        // $(document).ready(function () {
+        //     $('#phone3').mask('0000000000', { placeholder: "(+380) __________" });
+        //     $('#phone9').mask('(000) 0000000', { placeholder: "(+380) _________" });
+        //     $('#phoneM').mask('(000) 0000000', { placeholder: "(+380) _________" });
+        // });
 
         function checkValidBtn(data) {
             console.log(data);
@@ -916,35 +919,34 @@
             data = dataForm.split(' ')
             console.log(data)
             form = document.getElementById(data[0])
-            if (form.checkValidity() & ln == 14) {
+            if (form.checkValidity() & ln >= 9) {
                 document.getElementById(data[1]).dataset.toggle = 'modal';
-                document.getElementById(data[1]).disabled = false;
+                // document.getElementById(data[1]).disabled = false;
                 document.querySelector('.drag-alarm').remove();
             }
             else {
-                document.getElementById(data[1]).disabled = true;
+                // document.getElementById(data[1]).disabled = true;
                 document.getElementById(data[1]).dataset.toggle = '';
             }
         };
 
 
-        function checkValidDragon(data) {
-            thisEl = document.getElementById(data.id);
-            ln = data.value.replace(/_/g, "").length;
-            if (document.querySelector('.drag-alarm') == null &
-                ln != 14) {
-                console.log('111');
-                let p = document.createElement('p');
-                p.className = "drag-alarm";
-                p.innerHTML = "<img src='img/dino.png' alt='done'> поле не может быть пустым";
+        // function checkValidDragon(data) {
+        //     thisEl = document.getElementById(data.id);
+        //     ln = data.value.replace(/_/g, "").length;
+        //     if (document.querySelector('.drag-alarm') == null &
+        //         ln != 14) {
+        //         console.log('111');
+        //         let p = document.createElement('p');
+        //         p.className = "drag-alarm";
+        //         p.innerHTML = "<img src='img/dino.png' alt='done'> поле не может быть пустым";
 
-                thisEl.after(p);
-                setTimeout(() => {
-                    document.querySelector('.drag-alarm').remove();
-                }, 10000);
-            }
-
-        }
+        //         thisEl.after(p);
+        //         setTimeout(() => {
+        //             document.querySelector('.drag-alarm').remove();
+        //         }, 10000);
+        //     }
+        // }
 
     </script>
 </body>
