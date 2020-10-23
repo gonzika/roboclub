@@ -314,7 +314,6 @@ padding-bottom: 50px;
     transition: all .3s ease-in-out;
     background-color: #fff;
     border-radius: 50%;
-    
 }
 
 .swiper-button svg path {
@@ -322,17 +321,17 @@ padding-bottom: 50px;
     transition: all .3s ease-in-out;
 }
 
-.swiper-button:hover svg {
+.swiper-button:hover:not(.swiper-button-disabled) svg  {
     fill: #eaeaea;
     background-color: #64B42D;
     transition: all .3s ease-in-out;
 }
 
-.section6 .swiper-button:hover svg {
+.section6 .swiper-button:hover:not(.swiper-button-disabled) svg {
     fill: #fff;
 }
 
-.swiper-button:hover path {
+.swiper-button:hover:not(.swiper-button-disabled) path {
     stroke: #64B42D;
     transition: all .3s ease-in-out;
 }
@@ -342,17 +341,12 @@ padding-bottom: 50px;
     transform: scaleX(-1);
 }
 
+.swiper-button-disabled {
+    cursor: auto;
+}
+
 .swiper-button-disabled svg {
     fill: #C3C3C3;
-}
-
-.swiper-button-disabled:hover svg {
-    fill: #C3C3C3;
-    background-color: white;
-}
-
-.swiper-button-disabled:hover svg path {
-    stroke: #C3C3C3;
 }
 
 @media screen and (max-width: 500px) {
@@ -857,7 +851,7 @@ letter-spacing: 0.05em;
 
 .slider2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 55px;
 }
 
@@ -866,17 +860,20 @@ letter-spacing: 0.05em;
 }
 
 .slider2--slide {
-text-align: center;
-max-width: 160px;
+    text-align: center;
+}
+
+.slider2--slide img {
+    max-width: 100%;
+}
+
+.swiper-button-next2 {
+    margin-left: 0;
 }
 
 @media (max-width: 1135px) {
     .swiper-container2 {
         max-width: 70%;
-    }
-
-    .slider2--slide img {
-        width: 100%;
     }
 
     .slider2 {
@@ -888,7 +885,7 @@ max-width: 160px;
 
 .swiper2--text-teacher {
     text-align: center;
-margin-top: 20px;
+    margin-top: 20px;
 }
 
 .text-teacher--short {
