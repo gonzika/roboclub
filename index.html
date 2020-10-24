@@ -892,6 +892,13 @@
         //     $('#phoneM').mask('(000) 0000000', { placeholder: "(+380) _________" });
         // });
 
+        document.querySelectorAll("input[name = 'phone']").forEach(item => {
+            item.addEventListener('keyup', event => {
+                item.value = item.value.replace(/[^\d]/g, '');
+            })
+        })
+
+
         function checkValidBtn(data) {
             console.log(data);
             dataForm = data.dataset.form;
