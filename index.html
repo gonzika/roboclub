@@ -17,16 +17,16 @@
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
 
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -38,46 +38,40 @@
 
 <body>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="modal__take-order">
-                        <form id="formM" method="POST">
-                            <div class="telInput__box"><input class="section9--telInput" type="text" name="firstname"
-                                    placeholder="ваше имя">
-                            </div>
-                            <div class="for-dragon telInput__box">
-                                <input class="section9--telInput" type="text" name="phone" id="phoneM"
-                                    placeholder="(+380) _________" required minlength="9" maxlength="16"
-                                    data-form="formM butM" onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
-                                    title="Введите 9 цифр номера телефона">
-                            </div> <button type="button" id="butM" class="take-order take-order--9"
-                                onclick="checkValidBtn(this)" data-target="#exampleModalCenter2" data-toggle=""
-                                data-form="formM phoneM">обратный
-                                звонок</button>
-                        </form>
+    <div class="modal-my modal-my1">
+        <div class="modal__wind">
+            <div class="modal__take-order">
+                <form id="formM" method="dialog">
+                    <div class="telInput__box"><input class="section9--telInput" type="text" name="firstname"
+                            placeholder="ваше имя">
                     </div>
+                    <div class="for-dragon telInput__box">
+                        <input class="section9--telInput" type="text" name="phone" id="phoneM"
+                            placeholder="(+380) _________" required minlength="9" maxlength="16" data-form="formM butM"
+                            pattern=".{9,}" onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
+                            title="Введите 9 цифр номера телефона">
+                    </div>
+                    <button type="submit" id="butM" class="take-order take-order--9 form-order"
+                        onclick="checkValidBtn(this)" data-target="#exampleModalCenter2" data-toggle=""
+                        data-form="formM phoneM">обратный
+                        звонок</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-my modal-my2">
+        <div class="modal__wind">
+            <div class="row-robo row--modal">
+                <img src="img/mdi_done.png" alt="done" class="img-done--sm">
+                <div class="order-text">
+                    <h3 class="order-h3">заявка принята</h3>
+                    <p class="order-p">С вами свяжутся в течение суток</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row-robo row--modal">
-                        <img src="img/mdi_done.png" alt="done" class="img-done--sm">
-                        <div class="order-text">
-                            <h3 class="order-h3">заявка принята</h3>
-                            <p class="order-p">С вами свяжутся в течение суток</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <header>
         <img src="./img/header.png" alt="header" class="head-trinity-img" />
@@ -370,16 +364,15 @@
                     </div>
                     <strong class="zapishi3">получите бесплатное занятие!</strong>
 
-                    <form class="order3" id="order3" method="POST">
+                    <form class="order3" id="order3" method="dialog">
 
                         <div class="for-dragon telInput__box telInput__box--mr">
                             <input class="telInput" type="text" name="phone" placeholder="(+380) _________" id="phone3"
-                                required minlength="9" maxlength="16" data-form="order3 but3"
-                                onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
-                                title="Введите 9 цифр номера телефона">
+                                pattern=".{9,}" required minlength="9" maxlength="16" data-form="order3 but3"
+                                onkeyup="makeNodisable(this)" title="Введите 9 цифр номера телефона">
                         </div>
 
-                        <button type="button" id="but3" class="take-order" data-toggle="" onclick="checkValidBtn(this)"
+                        <button type="submit" id="but3" class="take-order form-order" onclick="checkValidBtn(this)"
                             data-form="order3 phone3" data-target="#exampleModalCenter2">записаться</button>
                     </form>
 
@@ -695,20 +688,18 @@
                         <h2 class="section9--h2 white-shadow">остались вопросы?</h2>
                         <div class="itcours-grey white-shadow">оставьте номер телефона и мы перезвоним Вам!</div>
 
-                        <form id="form9" method="POST">
+                        <form id="form9" method="dialog">
                             <div class="telInput__box"><input class="section9--telInput" type="text" name="firstname"
                                     placeholder="ваше имя">
                             </div>
                             <div class="for-dragon telInput__box">
                                 <input class="section9--telInput" type="text" name="phone" id="phone9"
                                     placeholder="(+380) _________" required minlength="9" maxlength="16"
-                                    data-form="form9 but9" onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
+                                    data-form="form9 but9" pattern=".{9,}" onkeyup="makeNodisable(this)"
                                     title="Введите 9 цифр номера телефона">
                             </div>
-                            <button type="button" id="but9" class="take-order take-order--9" data-toggle=""
-                                data-form="form9 phone9" onclick="checkValidBtn(this)"
-                                data-target="#exampleModalCenter2">обратный
-                                звонок</button>
+                            <button type="submit" id="but9" class="take-order take-order--9  form-order" data-toggle=""
+                                data-form="form9 phone9" onclick="checkValidBtn(this)">обратный звонок</button>
                         </form>
                     </div>
                 </div>
@@ -882,22 +873,47 @@
             }
         });
 
-        // $("#phone9").mask("(+380) 9999999");
-        // $("#phone3").mask("(+380) 9999999");
-        // $("#phoneM").mask("(+380) 9999999");
 
-        // $(document).ready(function () {
-        //     $('#phone3').mask('0000000000', { placeholder: "(+380) __________" });
-        //     $('#phone9').mask('(000) 0000000', { placeholder: "(+380) _________" });
-        //     $('#phoneM').mask('(000) 0000000', { placeholder: "(+380) _________" });
-        // });
+        document.querySelectorAll("button:not(.form-order)").forEach(item => {
+            item.addEventListener('click', event => {
+                showModal(document.querySelector(".modal-my1"))
+            })
+        })
+
+        document.querySelectorAll("form").forEach(item => {
+            item.addEventListener('submit', event => {
+                showModal(document.querySelector(".modal-my2"))
+            })
+        })
+
+        document.querySelectorAll(".modal__wind").forEach(item => {
+            item.addEventListener('click', event => {
+                event.stopPropagation();
+            })
+        })
+
+        document.querySelectorAll(".modal-my").forEach(item => {
+            item.addEventListener('click', event => {
+                hideModal(item);
+            })
+        })
+
+
+        function hideModal(item) {
+            item.style.opacity = '0';
+            item.style.visibility = 'hidden';
+        }
+
+        function showModal(item) {
+            item.style.visibility = 'visible';
+            item.style.opacity = '1';
+        }
 
         document.querySelectorAll("input[name = 'phone']").forEach(item => {
             item.addEventListener('keyup', event => {
                 item.value = item.value.replace(/[^\d]/g, '');
             })
         })
-
 
         function checkValidBtn(data) {
             console.log(data);
@@ -913,7 +929,8 @@
                 console.log(p);
             }
             else {
-                $('#exampleModalCenter').modal('hide');
+                hideModal(document.querySelector(".modal-my"));
+                document.querySelector('.drag-alarm').remove();
             }
         }
 
@@ -955,6 +972,15 @@
         //     }
         // }
 
+        // $("#phone9").mask("(+380) 9999999");
+        // $("#phone3").mask("(+380) 9999999");
+        // $("#phoneM").mask("(+380) 9999999");
+
+        // $(document).ready(function () {
+        //     $('#phone3').mask('0000000000', { placeholder: "(+380) __________" });
+        //     $('#phone9').mask('(000) 0000000', { placeholder: "(+380) _________" });
+        //     $('#phoneM').mask('(000) 0000000', { placeholder: "(+380) _________" });
+        // });
     </script>
 </body>
 

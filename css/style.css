@@ -325,6 +325,7 @@ padding-bottom: 50px;
     transition: all .3s ease-in-out;
     background-color: #fff;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .swiper-button svg path {
@@ -1140,6 +1141,7 @@ letter-spacing: 0.05em;
     .section7 {
         padding-top: 0;
         text-align: center;
+        margin-top: 20px;
     }
 
     .padd-bot-55 {
@@ -1314,9 +1316,6 @@ footer {
     line-height: 16px;
     letter-spacing: 0.05em;
     color: #C3C3C3;
-
-    position: absolute;
-    bottom: 0;
 }
 
 .for-dragon {
@@ -1375,7 +1374,7 @@ footer .container {
     }
 
     .dog3, .section9--left, .section7__boy-bg {
-        opacity: 0.75;
+        opacity: 0.6;
     }
 
     .dog3 {
@@ -1400,6 +1399,10 @@ footer .container {
     width: 350px;
 }
 
+.modal-my .telInput__box {
+    display: flex;
+}
+
 #form9 .telInput__box, #formM .telInput__box {
     margin: 0 auto;
     max-width: 350px;
@@ -1414,5 +1417,40 @@ footer .container {
 
     .img-done--sm {
         width: 33%;
+    }
+
+    .h2--big {
+        font-size: 24px;
+    }
+}
+
+.modal-my {
+    background-color: #00000060;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease;
+}
+
+.modal__wind {
+    background: #ffffff;
+    width: 40%;
+    padding: 15px;
+    /* height: 20vh; */
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 100;
+}
+
+@media screen and (max-width: 799px) {
+    .modal__wind {
+        width: 80%;
     }
 }
