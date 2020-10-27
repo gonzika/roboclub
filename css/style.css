@@ -113,8 +113,12 @@ h2 {
     height: 39px;
     left: 15px;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 42px;
     justify-content: space-between;
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.39) ;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.39);
 }
 
 @media screen and (max-width: 500px) {
@@ -122,6 +126,7 @@ h2 {
         margin-bottom: 42px;
         justify-content: space-around;
         width: 100%;
+        height: auto;
     }
 
     .misto-logo {
@@ -150,28 +155,24 @@ h2 {
     }
 }
 
-.Python-logo {
-    width: 39px;
+.zapishi-logo img {
     height: 39px;
-    background-image: url("../img/Python-logo-1.png");
+}
+
+.python-logo {
+    width: 39px;
 }
 
 .arduino {
     width: 52px;
-    height: 39px;
-    background-image: url("../img/arduino-1.png");
 }
 
 .scratch {
     width: 49px;
-    height: 39px;
-    background-image: url("../img/scratch-1.png");
 }
 
 .wedo-en-benidorm {
     width: 76px;
-    height: 39px;
-    background-image: url("../img/wedo-en-benidorm-1.png");
 }
 
 .take-order, .take-order3 {
@@ -200,6 +201,10 @@ h2 {
 
 .section3 {
     padding-top: 5px;
+}
+
+.section3 .container {
+    max-width: 1125px;
 }
 
 .section2 {
@@ -628,6 +633,7 @@ padding-bottom: 50px;
 .video__iframe {
     width: 635px;
     height: 380px;
+    margin-right: 40px;
 }
 
 @media screen and (max-width: 600px) {
@@ -637,16 +643,15 @@ padding-bottom: 50px;
 }
 
 .list3 {
-    margin-left: 52px;
-    margin-top: 10px;
+    margin: 10px 25px 0;
     display: block;
-    
 }
 
 .list3 li {
     font-size: 18px;
     margin-bottom: 30px;
     position: relative;
+    padding-left: 10px;
 }
 
 .list3 li:before {
@@ -726,7 +731,7 @@ padding-bottom: 50px;
     font-size: 32px;
     line-height: 37px;
     text-transform: uppercase;
-    color: #64B42D;
+    color: #64B42D !important;
 }
 
 @media screen and (max-width: 600px) {
