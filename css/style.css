@@ -203,9 +203,9 @@ h2 {
     padding-top: 5px;
 }
 
-.section3 .container {
+/* .section3 .container {
     max-width: 1125px;
-}
+} */
 
 .section2 {
 padding-bottom: 50px;
@@ -639,11 +639,12 @@ padding-bottom: 50px;
 @media screen and (max-width: 600px) {
     .video__iframe {
         width: 100%;
+        margin-right: 0;
     }
 }
 
 .list3 {
-    margin: 10px 25px 0;
+    margin: 10px 50px 15px 0;
     display: block;
 }
 
