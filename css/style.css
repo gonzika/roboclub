@@ -61,7 +61,7 @@ h2 {
 
 @media screen and (max-width: 981px) {
     .sect1-pic {
-        opacity: 0.85;
+        opacity: 85%;
     }
 }
 
@@ -70,7 +70,7 @@ h2 {
         transform: scale(-1, 1); 
         right: auto;
         left: 0;
-        opacity: 0.5;
+        opacity: 65%;
     }
 }
 
@@ -1345,12 +1345,12 @@ footer .container {
  @media screen and (max-width: 799px) {
     .sect8-num {
         font-size: 40px;
-        line-height: 60px;
+        line-height: 1;
     }
     
     .sect8-text {
         font-size: 12px;
-        line-height: 0px;
+        line-height: 1;
         text-align: center;
         letter-spacing: 0;
     }
