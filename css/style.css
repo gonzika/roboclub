@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
 body {
     background: #fff;
     font-family: Ubuntu;
@@ -23,12 +25,11 @@ header {
 }
 
 h2 {
-    font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-text-transform: uppercase;
-color: #2C2C2C;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #2C2C2C;
 }
 
 .container, .head-trinity-img {
@@ -92,7 +93,7 @@ color: #2C2C2C;
 
 .zapishi1 {
     max-width: 409px;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 43px;
     line-height: 49px;
     text-transform: uppercase;
@@ -179,8 +180,7 @@ color: #2C2C2C;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     border: 2px solid transparent;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0.2em;
@@ -227,7 +227,7 @@ padding-bottom: 50px;
 }
 
 .itcours {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 30px;
     line-height: 28px;
     text-transform: uppercase;
@@ -425,8 +425,7 @@ padding-bottom: 50px;
     position: absolute;
     top: -23%;
     right: -5%;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;
@@ -445,8 +444,7 @@ padding-bottom: 50px;
 }
 
 .slideTitle {
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     text-align: left;
     font-size: 24px;
     line-height: 28px;
@@ -466,9 +464,7 @@ padding-bottom: 50px;
     background: #FFFFFF;
     box-shadow: 1px 1px 5px rgba(44, 44, 44, 0.15);
     border-radius: 30px;
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
@@ -509,8 +505,7 @@ padding-bottom: 50px;
     position: relative;
     margin-top: auto;
     margin-bottom: 70px;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     text-align: center;
@@ -523,7 +518,7 @@ padding-bottom: 50px;
     display: inline;
     position: absolute;
     right: 5%;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
@@ -532,8 +527,7 @@ padding-bottom: 50px;
 }
 
 .valuta {
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
@@ -722,7 +716,7 @@ padding-bottom: 50px;
 
 
 .zapishi3 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
     line-height: 37px;
     text-transform: uppercase;
@@ -751,8 +745,7 @@ padding-bottom: 50px;
     box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
     text-align: center;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.2em;
     text-transform: lowercase;
@@ -815,8 +808,7 @@ background: url("../img/5f2d2656b3012.png");
 
 .list4 {
     display: flex;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     letter-spacing: 0.05em;
@@ -849,18 +841,16 @@ background: url("../img/5f2d2656b3012.png");
 }
 
 h3 {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 150%;
     letter-spacing: 0.05em;
 }
 
 .list-text1 {
-    max-width: 300px;
-    padding-left: 16px;
-    padding-right: 26px;
+    max-width: 255px;
+    margin-left: 15px;
+    margin-right: 25px;
     margin-bottom: 55px;
 }
 
@@ -1084,7 +1074,7 @@ letter-spacing: 0.05em;
 
 
 .h2--big {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
     line-height: 37px;
     text-transform: uppercase;
@@ -1127,6 +1117,10 @@ letter-spacing: 0.05em;
         font-weight: 700;
         text-shadow: 1px 1px 2px white, 0px 1px 2px white;
         color: #2C2C2C;
+    }
+
+    .drag-alarm.white-shadow {
+        color: red;
     }
 
     .section1 .zapishi1 {
@@ -1211,7 +1205,7 @@ letter-spacing: 0.05em;
 }
 
 .section9--h2 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 43px;
     line-height: 49px;
     text-transform: uppercase;
@@ -1237,8 +1231,7 @@ letter-spacing: 0.05em;
     border-radius: 30px;
     border-width: 0px;
     
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.2em;
@@ -1254,7 +1247,6 @@ letter-spacing: 0.05em;
 }
 
 .footer--left {
-    font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;

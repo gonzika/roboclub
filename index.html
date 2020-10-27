@@ -7,15 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -27,12 +22,12 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script> -->
     <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
+    <!-- <script src="script/jquery.maskedinput.min.js"></script> -->
+    <!-- <script src="script/jquery.mask.js"></script> -->
 
     <link rel="stylesheet" href="./css/style.css" />
 
     <script src="https://kit.fontawesome.com/c9271e9314.js" crossorigin="anonymous"></script>
-    <!-- <script src="script/jquery.maskedinput.min.js"></script> -->
-    <!-- <script src="script/jquery.mask.js"></script> -->
 
 </head>
 
@@ -923,7 +918,7 @@
             thisEl = document.getElementById(data[1])
             if (form.checkValidity() == false) {
                 let p = document.createElement('p');
-                p.className = "drag-alarm";
+                p.className = "drag-alarm white-shadow";
                 p.innerHTML = "<img src='img/dino.png' alt='done'> поле не может быть пустым";
                 thisEl.after(p);
                 console.log(p);
