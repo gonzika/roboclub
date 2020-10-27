@@ -249,6 +249,10 @@ padding-bottom: 50px;
         text-align: center;
         font-size: 24px;
     }
+
+    .section2 .itcours, .section2 .itcours-grey {
+        text-align: left;
+    }
     
     .itcours-grey {
         font-size: 12px;
@@ -1055,6 +1059,10 @@ letter-spacing: 0.05em;
 
       .section6 .row-end {
           max-width: 100%;
+      }
+
+      .row-end {
+            text-align: center;
       }
 
       .section6 .row-center,
