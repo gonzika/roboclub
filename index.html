@@ -24,12 +24,11 @@
                     </div>
                     <div class="for-dragon telInput__box">
                         <input class="section9--telInput" type="text" name="phone" id="phoneM"
-                            placeholder="(+380) _________" required minlength="9" maxlength="16" data-form="formM butM"
-                            pattern=".{9,}" onkeyup="makeNodisable(this)" title="Введите 9 цифр номера телефона">
+                            placeholder="(+380) _________" required minlength="9" maxlength="16" pattern=".{9,}"
+                            title="Введите 9 цифр номера телефона">
                     </div>
                     <button type="submit" id="butM" class="take-order take-order--9 form-order"
-                        onclick="checkValidBtn(this)" data-target="#exampleModalCenter2" data-toggle=""
-                        data-form="formM phoneM">обратный
+                        onclick="checkValidBtn(this)" data-form="formM phoneM">обратный
                         звонок</button>
                 </form>
             </div>
@@ -343,8 +342,8 @@
 
                         <div class="for-dragon telInput__box telInput__box--mr">
                             <input class="telInput" type="text" name="phone" placeholder="(+380) _________" id="phone3"
-                                pattern=".{9,}" required minlength="9" maxlength="16" data-form="order3 but3"
-                                onkeyup="makeNodisable(this)" title="Введите 9 цифр номера телефона">
+                                pattern=".{9,}" required minlength="9" maxlength="16"
+                                title="Введите 9 цифр номера телефона">
                         </div>
 
                         <button type="submit" id="but3" class="take-order form-order" onclick="checkValidBtn(this)"
@@ -669,7 +668,6 @@
                             <div class="for-dragon telInput__box">
                                 <input class="section9--telInput" type="text" name="phone" id="phone9"
                                     placeholder="(+380) _________" required minlength="9" maxlength="16"
-                                    data-form="form9 but9" pattern=".{9,}" onkeyup="makeNodisable(this)"
                                     title="Введите 9 цифр номера телефона">
                             </div>
                             <button type="submit" id="but9" class="take-order take-order--9  form-order" data-toggle=""
@@ -861,7 +859,11 @@
 
         document.querySelectorAll("form").forEach(item => {
             item.addEventListener('submit', event => {
-                showModal(document.querySelector(".modal-my2"))
+                showModal(document.querySelector(".modal-my2"));
+                fetch("recall.html", {
+                    method: 'POST',
+                    body: new FormData(item)
+                });
             })
         })
 
@@ -898,7 +900,6 @@
         });
 
         function checkValidBtn(data) {
-            console.log(data);
             dataForm = data.dataset.form;
             data = dataForm.split(' ')
             form = document.getElementById(data[0])
@@ -908,7 +909,6 @@
                 p.className = "drag-alarm white-shadow";
                 p.innerHTML = "<img src='img/dino.png' alt='done'> поле не может быть пустым";
                 thisEl.after(p);
-                console.log(p);
             }
             else {
                 hideModal(document.querySelector(".modal-my"));
