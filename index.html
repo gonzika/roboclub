@@ -5,34 +5,16 @@
     <title>Робоклуб</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
-    <!-- <script src="script/jquery.maskedinput.min.js"></script> -->
-    <!-- <script src="script/jquery.mask.js"></script> -->
-
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-
-    <script src="https://kit.fontawesome.com/c9271e9314.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-    <!-- Modal -->
     <div class="modal-my modal-my1">
         <div class="modal__wind">
             <div class="modal__take-order">
@@ -749,7 +731,6 @@
                         </div>
                     </div>
                     <div class="footer__right">
-                        <!-- <img src="img/map.jpg" alt="map"> -->
                         <iframe class="footer__map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.133652899952!2d37.51440999804557!3d47.096450486772525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e37ef5c322bf%3A0x39b5c53e20db6032!2sTRINITY!5e0!3m2!1sru!2sua!4v1603802920912!5m2!1sru!2sua"
                             frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
@@ -934,54 +915,6 @@
                 document.querySelector('.drag-alarm').remove();
             }
         }
-
-        // function makeNodisable(data) {
-        //     console.log(data.value.replace(/_/g, ""));
-        //     ln = data.value.replace(/_/g, "").length;
-        //     console.log(ln);
-        //     dataForm = data.dataset.form;
-        //     console.log(dataForm);
-        //     data = dataForm.split(' ')
-        //     console.log(data)
-        //     form = document.getElementById(data[0])
-        //     if (form.checkValidity() & ln >= 9) {
-        //         // document.getElementById(data[1]).dataset.toggle = 'modal';
-        //         // document.getElementById(data[1]).disabled = false;
-        //         document.querySelector('.drag-alarm').remove();
-        //     }
-        //     else {
-        //         // document.getElementById(data[1]).disabled = true;
-        //         // document.getElementById(data[1]).dataset.toggle = '';
-        //     }
-        // };
-
-
-        // function checkValidDragon(data) {
-        //     thisEl = document.getElementById(data.id);
-        //     ln = data.value.replace(/_/g, "").length;
-        //     if (document.querySelector('.drag-alarm') == null &
-        //         ln != 14) {
-        //         console.log('111');
-        //         let p = document.createElement('p');
-        //         p.className = "drag-alarm";
-        //         p.innerHTML = "<img src='img/dino.png' alt='done'> поле не может быть пустым";
-
-        //         thisEl.after(p);
-        //         setTimeout(() => {
-        //             document.querySelector('.drag-alarm').remove();
-        //         }, 10000);
-        //     }
-        // }
-
-        // $("#phone9").mask("(+380) 9999999");
-        // $("#phone3").mask("(+380) 9999999");
-        // $("#phoneM").mask("(+380) 9999999");
-
-        // $(document).ready(function () {
-        //     $('#phone3').mask('0000000000', { placeholder: "(+380) __________" });
-        //     $('#phone9').mask('(000) 0000000', { placeholder: "(+380) _________" });
-        //     $('#phoneM').mask('(000) 0000000', { placeholder: "(+380) _________" });
-        // });
     </script>
 </body>
 
