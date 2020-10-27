@@ -261,12 +261,12 @@ padding-bottom: 50px;
         margin: 15px 0;
     }
 
-    .section-head .row-center, .section-head .row-end {
+    .section-head .row-center {
         display: none;
     }
 
     .section-head .row-start {
-        width: 100%;
+        width: 66%;
     }
 
     .section2 {
@@ -283,9 +283,15 @@ padding-bottom: 50px;
     position: static;
 }
 
-.row-center {
+/* .row-center {
     display: block;
     text-align: center;
+} */
+
+.row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-pagination-bullet {
@@ -313,7 +319,7 @@ padding-bottom: 50px;
     text-align: end;
  }
 
- .swiper--nav {
+ .swiper-nav {
      display: flex;
      justify-content: space-between;
      margin-bottom: 27px;
@@ -740,17 +746,18 @@ padding-bottom: 50px;
 
 .telInput {
     width: 100%;
-    height: 58px;
     background: #FFFFFF;
     box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
-    text-align: center;
     font-weight: 400;
+    font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.2em;
     text-transform: lowercase;
     color: #C3C3C3;
     border-width: 0;
+    padding: 15px 40px;
+    box-sizing: border-box;
 }
 
 .take-order3 {
@@ -908,7 +915,7 @@ letter-spacing: 0.05em;
     letter-spacing: 0;
 }
 
-.swiper-button-center {
+.swiper-button-center, .swiper-button {
     display: flex;
     align-items: center;
 }
@@ -995,7 +1002,7 @@ letter-spacing: 0.05em;
 
 @media (max-width: 1175px) {
     .swiper-container3,
-    .section6 .swiper--nav, 
+    .section6 .swiper-nav, 
     .section6>.container>.itcours {
         display: none;
     }
@@ -1055,13 +1062,13 @@ letter-spacing: 0.05em;
         display: none;
     }
 
-      .swiper--nav {
+      .swiper-nav {
           justify-content: center;
       }
 }
 
 @media (max-width: 500px) {
-    .section6 .swiper--nav {
+    .section6 .swiper-nav {
         display: none;
     }
 }
@@ -1153,20 +1160,20 @@ letter-spacing: 0.05em;
     background-color: #64B42D;
 }
 
-.section8--flex {
+.section8__flex {
     display: flex;
     justify-content: space-around;
     color: #FFFFFF;
 }
 
-.section9--flex {
+.section9__flex {
     display: flex;
     justify-content: flex-end;
     position: relative;
 }
 
 @media screen and (max-width: 799px) {
-    .section9--flex {
+    .section9__flex {
         display: block;
     }
 }
@@ -1190,8 +1197,7 @@ letter-spacing: 0.05em;
     padding-top: 90px;
 }
 
-.section9--left {
-    /* background-image: url("../img/robots 1.png"); */
+.section9__left {
     max-width: 100%;
     position: absolute;
     left: 100px;
@@ -1199,7 +1205,7 @@ letter-spacing: 0.05em;
     z-index: -5;
 }
 
-.section9--right {
+.section9__right {
     text-align: center;
     position: relative;
 }
@@ -1223,14 +1229,11 @@ letter-spacing: 0.05em;
 }
 
 .section9--telInput {
-    display: inline;
     width: 100%;
-    height: 58px;
     background: #FFFFFF;
     box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
     border-width: 0px;
-    
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
@@ -1238,7 +1241,7 @@ letter-spacing: 0.05em;
     text-transform: lowercase;
     color: #C3C3C3;
     text-align: start;
-    padding-left: 42px;
+    padding: 15px 40px;
     margin-bottom: 26px;
 }
 
@@ -1246,7 +1249,7 @@ letter-spacing: 0.05em;
     margin: 23px 0;
 }
 
-.footer--left {
+.footer__left {
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;
@@ -1263,14 +1266,19 @@ footer span {
     margin-bottom: 45px;
 }
 
-.footer--right {
+.footer__right {
     display: flex;  
     align-items: flex-end;
     margin-bottom: 15px;
 }
 
-.footer--right img {
+/* .footer__right img {
     max-width: 100%;
+} */
+
+.footer__map {
+    width: 650px;
+    height: 450px;
 }
 
 footer {
@@ -1356,7 +1364,7 @@ footer .container {
         text-align: center;
     }
 
-    .section9--left {
+    .section9__left {
         left: 0;
     }
 
@@ -1365,7 +1373,7 @@ footer .container {
         line-height: 1.2;
     }
 
-    .dog3, .section9--left, .section7__boy-bg {
+    .dog3, .section9__left, .section7__boy-bg {
         opacity: 0.6;
     }
 
@@ -1384,6 +1392,12 @@ footer .container {
 
     .socialMedia {
         margin-bottom: 15px;
+    }
+
+    .footer__map {
+        width: 450px;
+        height: 450px;
+        max-width: 100%;
     }
 }
 
@@ -1459,4 +1473,9 @@ footer .container {
     .modal__wind .take-order--9 {
         margin: 0;
     }
+}
+
+input[name='phone']:valid {
+    background-color: rgba(66, 212, 9, 0.164);
+    color: forestgreen;
 }

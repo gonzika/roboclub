@@ -43,8 +43,7 @@
                     <div class="for-dragon telInput__box">
                         <input class="section9--telInput" type="text" name="phone" id="phoneM"
                             placeholder="(+380) _________" required minlength="9" maxlength="16" data-form="formM butM"
-                            pattern=".{9,}" onkeyup="makeNodisable(this)" onblur="checkValidDragon(this)"
-                            title="Введите 9 цифр номера телефона">
+                            pattern=".{9,}" onkeyup="makeNodisable(this)" title="Введите 9 цифр номера телефона">
                     </div>
                     <button type="submit" id="butM" class="take-order take-order--9 form-order"
                         onclick="checkValidBtn(this)" data-target="#exampleModalCenter2" data-toggle=""
@@ -89,8 +88,7 @@
                         <div class="wedo-en-benidorm"></div>
                     </div>
 
-                    <button type="button" class="take-order" data-toggle="modal"
-                        data-target="#exampleModalCenter">подать заявку</button>
+                    <button type="button" class="take-order">подать заявку</button>
 
                 </div>
             </div>
@@ -368,7 +366,7 @@
                         </div>
 
                         <button type="submit" id="but3" class="take-order form-order" onclick="checkValidBtn(this)"
-                            data-form="order3 phone3" data-target="#exampleModalCenter2">записаться</button>
+                            data-form="order3 phone3">записаться</button>
                     </form>
 
                     <div class="dog3"></div>
@@ -380,7 +378,7 @@
         <section class="section4">
 
             <div class="container">
-                <h2 class=" ">мы развиваем:</h2>
+                <h2>мы развиваем:</h2>
                 <div class="list4">
                     <div class="cell4 list4-1">
                         <div class="list4-img1"><img class="list4-img1" alt="#1" src="img/1.png"></div>
@@ -518,7 +516,7 @@
             <div class="container">
                 <h2 class="itcours">Мероприятия</h2>
 
-                <div class="swiper--nav">
+                <div class="swiper-nav">
                     <div class="row3 start"></div>
                     <div class="row3 row-center">
                         <div class="swiper-pagination3"></div>
@@ -653,7 +651,7 @@
 
         <div class="section8">
             <div class="container">
-                <div class="section8--flex">
+                <div class="section8__flex">
                     <div>
                         <div class="sect8-num">15</div>
                         <p class="sect8-text">групп</p>
@@ -676,16 +674,15 @@
 
         <section class="section9">
             <div class="container">
-                <div class="section9--flex">
-                    <img src="img/robots 1.png" class="section9--left">
-                    <!-- <div class="section9--left"></div> -->
-                    <div class="section9--right">
+                <div class="section9__flex">
+                    <img src="img/robots 1.png" class="section9__left">
+                    <div class="section9__right">
                         <h2 class="section9--h2 white-shadow">остались вопросы?</h2>
                         <div class="itcours-grey white-shadow">оставьте номер телефона и мы перезвоним Вам!</div>
 
                         <form id="form9" method="dialog">
-                            <div class="telInput__box"><input class="section9--telInput" type="text" name="firstname"
-                                    placeholder="ваше имя">
+                            <div class="telInput__box">
+                                <input class="section9--telInput" type="text" name="firstname" placeholder="ваше имя">
                             </div>
                             <div class="for-dragon telInput__box">
                                 <input class="section9--telInput" type="text" name="phone" id="phone9"
@@ -705,7 +702,7 @@
             <div class="container">
                 <h2 class="itcours">контакты</h2>
                 <div class="row-robo">
-                    <div class="footer--left">
+                    <div class="footer__left">
                         <span class="socialMedia">
                             <a href="#">
                                 <svg width="36" height="36" viewbox="0 0 36 36" fill="none"
@@ -751,7 +748,13 @@
                             (063) 1000-700
                         </div>
                     </div>
-                    <div class="footer--right"><img src="img/map.jpg" alt="map"></div>
+                    <div class="footer__right">
+                        <!-- <img src="img/map.jpg" alt="map"> -->
+                        <iframe class="footer__map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.133652899952!2d37.51440999804557!3d47.096450486772525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e37ef5c322bf%3A0x39b5c53e20db6032!2sTRINITY!5e0!3m2!1sru!2sua!4v1603802920912!5m2!1sru!2sua"
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -907,8 +910,11 @@
         document.querySelectorAll("input[name = 'phone']").forEach(item => {
             item.addEventListener('keyup', event => {
                 item.value = item.value.replace(/[^\d]/g, '');
-            })
-        })
+                if (item.value.length >= 9) {
+                    document.querySelector('.drag-alarm').remove();
+                }
+            });
+        });
 
         function checkValidBtn(data) {
             console.log(data);
@@ -929,25 +935,25 @@
             }
         }
 
-        function makeNodisable(data) {
-            console.log(data.value.replace(/_/g, ""));
-            ln = data.value.replace(/_/g, "").length;
-            console.log(ln);
-            dataForm = data.dataset.form;
-            console.log(dataForm);
-            data = dataForm.split(' ')
-            console.log(data)
-            form = document.getElementById(data[0])
-            if (form.checkValidity() & ln >= 9) {
-                document.getElementById(data[1]).dataset.toggle = 'modal';
-                // document.getElementById(data[1]).disabled = false;
-                document.querySelector('.drag-alarm').remove();
-            }
-            else {
-                // document.getElementById(data[1]).disabled = true;
-                document.getElementById(data[1]).dataset.toggle = '';
-            }
-        };
+        // function makeNodisable(data) {
+        //     console.log(data.value.replace(/_/g, ""));
+        //     ln = data.value.replace(/_/g, "").length;
+        //     console.log(ln);
+        //     dataForm = data.dataset.form;
+        //     console.log(dataForm);
+        //     data = dataForm.split(' ')
+        //     console.log(data)
+        //     form = document.getElementById(data[0])
+        //     if (form.checkValidity() & ln >= 9) {
+        //         // document.getElementById(data[1]).dataset.toggle = 'modal';
+        //         // document.getElementById(data[1]).disabled = false;
+        //         document.querySelector('.drag-alarm').remove();
+        //     }
+        //     else {
+        //         // document.getElementById(data[1]).disabled = true;
+        //         // document.getElementById(data[1]).dataset.toggle = '';
+        //     }
+        // };
 
 
         // function checkValidDragon(data) {
