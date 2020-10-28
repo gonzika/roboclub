@@ -434,8 +434,8 @@ padding-bottom: 50px;
 
 .salesChild {
     position: absolute;
-    top: -23%;
-    right: -5%;
+    top: 0;
+    right: 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -573,6 +573,14 @@ padding-bottom: 50px;
         height: 42px;
         left: 25%;
         top: 458px;
+    }
+    
+    .salesChild {
+        line-height: 1;
+    }
+
+    .slideTitle {
+        font-size: 20px;
     }
 }
 
